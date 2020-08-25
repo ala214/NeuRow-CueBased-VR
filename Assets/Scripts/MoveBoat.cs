@@ -17,7 +17,7 @@ public class MoveBoat : MonoBehaviour {
 	public Transform compass;
 	public GameObject EndofSessionPanel;
 
-	public Image crossui, leftarrow, rightarrow;
+	public GameObject crossui, leftarrow, rightarrow;
 	public GameObject RewardText;
 	public static bool case800, case786, cross, left, right, hidearrow = false;
 	public static bool training;
@@ -32,9 +32,12 @@ public class MoveBoat : MonoBehaviour {
 		Settings.reverseHands = true;
 		boatspeed = 15f;
 
-		crossui.enabled = false;
-		leftarrow.enabled = false;
-		rightarrow.enabled = false;
+		crossui = GameObject.Find ("CrossVR");
+		leftarrow = GameObject.Find ("LeftArrowVR");
+		rightarrow = GameObject.Find ("RightArrowVR");
+		crossui.SetActive(false);
+		leftarrow.SetActive(false);
+		rightarrow.SetActive(false);
 
 		RewardText = GameObject.Find("RewardText");
 		RewardText.SetActive(false);
@@ -163,23 +166,6 @@ public class MoveBoat : MonoBehaviour {
 
 		}
 
-		// SSVEP FLASHING ARROWS (30 - 40 Hz) -- 30 = left, 40 = right (?)
-//		if(leftarrow.enabled == true){
-//			for(int mi = 0; mi < 30; mi++){
-//				leftarrow.enabled = false;
-//				leftarrow.enabled = true;
-//			}			
-//		}
-
-
-//		if(rightarrow.enabled == true){
-//			for(int mi = 0; mi < 40; mi++){
-//				rightarrow.enabled = false;
-//			}
-//			rightarrow.enabled = true;
-//		}
-
-
 	}
 
 
@@ -190,45 +176,45 @@ public class MoveBoat : MonoBehaviour {
 		switch (stim)
 		{
 		case 800: //hide cross
-			crossui.enabled = false;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(false);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross= false; 
 			left = false;
 			right = false;
 			hidearrow = false;
 			break;
 		case 786: // show cross
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross = true;
 			left = false;
 			right = false;
 			hidearrow = false;
 			break;
 		case 770: // right arrow
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = true;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(true);
 			cross= true;
 			left = false;
 			right = true;
 			hidearrow = false;
 			break;
 		case 769: // left arrow
-			crossui.enabled = true;
-			leftarrow.enabled = true;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(true);
+			rightarrow.SetActive(false);
 			cross= true; 
 			left = true;
 			right = false;
 			hidearrow = false;
 			break;
 		case 781: // hide arrow
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross= true;
 			hidearrow = true;
 			//left= false;
@@ -249,9 +235,9 @@ public class MoveBoat : MonoBehaviour {
 		switch (stim)
 		{
 		case 800: //hide cross
-			crossui.enabled = false;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(false);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross= false;
 			left = false;
 			right = false;
@@ -260,9 +246,9 @@ public class MoveBoat : MonoBehaviour {
 			case786 = false;
 			break;
 		case 786: // show cross
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross = true;
 			left = false;
 			right = false;
@@ -271,9 +257,9 @@ public class MoveBoat : MonoBehaviour {
 			case786 = true;
 			break;
 		case 770: // right arrow
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = true;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(true);
 			cross= true;
 			left = false;
 			right = true;
@@ -282,9 +268,9 @@ public class MoveBoat : MonoBehaviour {
 			case786 = false;
 			break;
 		case 769: // left arrow
-			crossui.enabled = true;
-			leftarrow.enabled = true;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(true);
+			rightarrow.SetActive(false);
 			cross= true;
 			left = true;
 			right = false;
@@ -293,9 +279,9 @@ public class MoveBoat : MonoBehaviour {
 			case786 = false;
 			break;
 		case 781: // hide arrow
-			crossui.enabled = true;
-			leftarrow.enabled = false;
-			rightarrow.enabled = false;
+			crossui.SetActive(true);
+			leftarrow.SetActive(false);
+			rightarrow.SetActive(false);
 			cross= true;
 			hidearrow = true;
 			case800 = false;

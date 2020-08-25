@@ -38,9 +38,9 @@ public class MoveReward : MonoBehaviour {
 			dir = dir.normalized;
 
 			// continuously move in direction of dir vector (to target)
-			Scoring.Instance.rewardtext.transform.position += dir * speed * Time.deltaTime;
+			//Scoring.Instance.rewardtext.transform.position.y += dir * speed * Time.deltaTime;
 
-			if(Scoring.Instance.rewardtext.transform.position.x < 0.1f)
+			if(Scoring.Instance.rewardtext.transform.position.y > 321f)
 			{
 				// hide reward during break
 				Debug.Log("inside hide reward during break");

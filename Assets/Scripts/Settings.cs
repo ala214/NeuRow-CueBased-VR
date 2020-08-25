@@ -106,10 +106,10 @@ public class Settings : MonoBehaviour
 		duration = "492";
 		Scoring.updateDuration(duration);
 
-		MainCamera = GameObject.Find("Main Camera");
-		OculusCamera = GameObject.Find("OVRCameraController");
+		//MainCamera = GameObject.Find("Main Camera");
+		//OculusCamera = GameObject.Find("OVRCameraController");
 
-		OculusCamera.SetActive (false);
+		//OculusCamera.SetActive (false);
 //		isTraining = true;
 
 		if(Application.loadedLevelName == "Game") // BCI MODE
@@ -348,10 +348,11 @@ public class Settings : MonoBehaviour
 			stimS = value;
 			//change stim size to S
 			Settings.Instance.cross.transform.localScale = new Vector3(1f,1f,1f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(0f,0.08f,-0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(1f,1f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-47.3f, 98.2f, 0f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(0.16f, 0f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(1f,1f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(56.6f, 98.2f, 0f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(5.54f, 0f, 2.21f);
 //			rewardtext.GetComponent<Text>().fontSize = 30f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(0.5f,0.5f,1f);
 			break;
@@ -360,10 +361,11 @@ public class Settings : MonoBehaviour
 //			print(name+": "+value);
 			stimM = value;
 			Settings.Instance.cross.transform.localScale = new Vector3(3f,3f,1f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(0f, 1.93f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(3f,3f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-146f, 98.2f, 0f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(0.16f, 1.98f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(3f,3f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(156f, 98.2f, 0f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(16.19f, 1.98f, 2.21f);
 //			Settings.Instance.rewardtext.fontSize = 50.0f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(1f,1f,1f);
 			break;
@@ -373,10 +375,11 @@ public class Settings : MonoBehaviour
 			stimL = value;
 			// change stim size to L
 			Settings.Instance.cross.transform.localScale = new Vector3(5f,5f,1f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(0f, 6.35f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-247f, 98.2f, 0f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(0.16f, 6.52f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(257f, 98.2f, 0f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(27.35f, 6.52f, 2.21f);
 //			Settings.Instance.rewardtext.fontSize = 75.0f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(2f,2f,1f);
 			break;
@@ -395,11 +398,11 @@ public class Settings : MonoBehaviour
 //			print(name+": "+value);
 			useNetwork = value;
 			break;
-		case "OculusRift":
+//		case "OculusRift":
 //			print(name+": "+value);
-			oculusRift = value;
-			switchCamera(oculusRift);
-			break;
+//			oculusRift = value;
+//			switchCamera(oculusRift);
+//			break;
 		case "LeapMotion":
 //			print(name+": "+value);
 			Settings.leapOn = value;
@@ -415,17 +418,17 @@ public class Settings : MonoBehaviour
 		}
 	}
 
-	public static void switchCamera(bool oculus){
+//	public static void switchCamera(bool oculus){
 
-		if (oculus) {
-			OculusCamera.SetActive(true);
-			MainCamera.SetActive(false);
-		}
-		else{
-			OculusCamera.SetActive(false);
-			MainCamera.SetActive(true);
-		}
-	}
+//		if (oculus) {
+//			OculusCamera.SetActive(true);
+//			MainCamera.SetActive(false);
+//		}
+//		else{
+//			OculusCamera.SetActive(false);
+//			MainCamera.SetActive(true);
+//		}
+//	}
 
 
 	public static void updateVariables(string name, float value)

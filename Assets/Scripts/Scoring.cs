@@ -188,7 +188,7 @@ public static Scoring Instance;
 					//Debug.Log("crossCount: "+crossCount);
 
 					if(crossCount == 4){
-	//					Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
+						Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
 						fireDisplay = true;
 						fireworks.SetActive(true);
 						// move reward text to fixed cross position
