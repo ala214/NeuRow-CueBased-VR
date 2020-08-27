@@ -33,6 +33,7 @@ public class Scoring : MonoBehaviour
 	public GameObject fireworks;
 	public GameObject rewardtext;
 	public GameObject scoreText;
+	public GameObject rocket;
 	public static bool fireDisplay = false;
 	public Transform defRewText;
 
@@ -54,6 +55,7 @@ public static Scoring Instance;
 		fireworks = GameObject.Find("Fireworks");
 		rewardtext.SetActive(false);
 		fireworks.SetActive(false);
+		rocket = GameObject.Find ("Sparkles5");
 		scoreText = GameObject.Find("ScoreText");
 		//scoreText.SetActive(true);
 		//defRewText.position = rewardtext.transform.position;
@@ -180,10 +182,6 @@ public static Scoring Instance;
 					} 
 				//}
 // SHOW REWARD
-				//if(crossCount >= 1 && MoveBoat.case800){
-	//				Debug.Log("Show Reward(s)");
-					//tempScore = 0;
-
 					rewardtext.SetActive(true);
 					//Debug.Log("crossCount: "+crossCount);
 
@@ -193,6 +191,9 @@ public static Scoring Instance;
 						fireworks.SetActive(true);
 						// move reward text to fixed cross position
 						//MoveReward.move = true;
+// BREAK
+						//if(rocket.GetComponent<ParticleSystem>().isStopped())
+						//	rewardtext.SetActive(false);
 					}
 				}
 
@@ -201,10 +202,10 @@ public static Scoring Instance;
 	//				Debug.Log("inside hide reward");
 					rewardtext.SetActive(false);
 // MOVE POINTS
-					if(fireDisplay == true){
-						rewardtext.transform.position = new Vector3(rewardtext.transform.position.x + 3.5f, rewardtext.transform.position.y + 37f, rewardtext.transform.position.z);
+//					if(fireDisplay == true){
+//						rewardtext.transform.position = new Vector3(rewardtext.transform.position.x, rewardtext.transform.position.y + 290.48f, rewardtext.transform.position.z);
 						// moving reward text back to original position
-					}
+//					}
 					fireDisplay = false;
 					fireworks.SetActive(false);
 
@@ -216,7 +217,7 @@ public static Scoring Instance;
 //					MoveBoat.countW = 0;
 					if (crossCount == 4){
 	//					Debug.Log("reseting crossCount!!!!!!!!!!!!!!!!!");
-						//fScore += tempScore;
+						fScore += tempScore;
 						crossCount = 0;
 						avgTotal = 0;
 						avgAvg = 0;
@@ -228,17 +229,17 @@ public static Scoring Instance;
 
 
 				// points & percentages
-				if(Settings.percentage){ 
-					if(avgScore > 0.0f && avgScore < 0.65f){
-						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+1 "+avgScore+"%";
-					}
-					else if(avgScore >= 0.65f && avgScore < 0.85f){
-						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+5 "+avgScore+"%";
-					}
-					else{ // if(avgScore >= 85f)
-						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+10 "+avgScore+"%";
-					} 
-				}
+//				if(Settings.percentage){ 
+//					if(avgScore > 0.0f && avgScore < 0.65f){
+//						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+1 "+avgScore+"%";
+//					}
+//					else if(avgScore >= 0.65f && avgScore < 0.85f){
+//						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+5 "+avgScore+"%";
+//					}
+//					else{ // if(avgScore >= 85f)
+//						//Settings.Instance.rewardtext.GetComponent<Text>().text = "+10 "+avgScore+"%";
+//					} 
+//				}
 
 			} 
 

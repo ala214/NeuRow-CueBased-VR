@@ -49,7 +49,7 @@ public class Settings : MonoBehaviour
 	public static bool stimL;
 	public static bool points;
 	public static bool percentage;
-	public static bool flash;
+	public static bool flash = true;
 //------------------------------------------
 
 //Network Settings -------------------------

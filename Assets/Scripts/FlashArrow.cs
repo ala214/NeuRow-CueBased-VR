@@ -22,18 +22,19 @@ public class FlashArrow : MonoBehaviour {
 
 		//StopAllCoroutines();
 		//Debug.Log("stopping all coroutines----------");
+		if (Settings.flash) {
+			if (MoveBoat.left) {
+				// make arrow flash 30 Hz
+				Debug.Log ("inside FlashArrow - move boat left");
+				StartCoroutine (blinkLeft (30.0f));
+				//Debug.Log("blink call counter total: "+fps_countL);
+			}
 
-		if(MoveBoat.left){
-			// make arrow flash 30 Hz
-			Debug.Log("inside FlashArrow - move boat left");
-			StartCoroutine(blinkLeft(30.0f));
-			//Debug.Log("blink call counter total: "+fps_countL);
-		}
-
-		if(MoveBoat.right){
-			// make arrow flash 40 Hz
-			Debug.Log("inside FlashArrow - move boat right");
-			StartCoroutine(blinkRight(40.0f));			
+			if (MoveBoat.right) {
+				// make arrow flash 40 Hz
+				Debug.Log ("inside FlashArrow - move boat right");
+				StartCoroutine (blinkRight (40.0f));			
+			}
 		}
 	}
 
