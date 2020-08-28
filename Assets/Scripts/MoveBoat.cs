@@ -41,10 +41,10 @@ public class MoveBoat : MonoBehaviour {
 		leftarrow.SetActive(false);
 		rightarrow.SetActive(false);
 
-		// HAS TO BE COMMENTED OUT FOR TRAINING ....
+		// HAS TO BE COMMENTED OUT FOR TRAINING ....-------------------------------------------
 		RewardText = GameObject.Find("RewardText");
 		RewardText.SetActive(false);
-		// ------------------------------------------
+		// ------------------------------------------------------------------------------------
 
 
 		

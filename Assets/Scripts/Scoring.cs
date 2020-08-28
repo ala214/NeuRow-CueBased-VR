@@ -38,12 +38,6 @@ public class Scoring : MonoBehaviour
 	public Transform defRewText;
 
 
-// How to do new scoring? 
-// If row == arrow cue, +1 point
-// If row == arrow cue 3x, +5 points & continue to get 5 until incorrect MI
-// If row == arrow cue 5x, fireworks? +10 points?
-// If row == arrow for entire block, +50 points?
-
 // count = countR + countL;
 // avgScore = count / (count+countW);
 public static Scoring Instance;

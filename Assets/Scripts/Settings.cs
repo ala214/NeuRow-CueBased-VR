@@ -64,13 +64,13 @@ public class Settings : MonoBehaviour
 //------------------------------------------
 
 //Haptics Settings -------------------------
-	public static string comPort;
-	public static float m1Power;
-	public static float m2Power;
-	public static float m3Power;
-	public static float m4Power;
-	public static float m5Power;
-	public static float m6Power;
+	public static string comPort = "5";
+	public static float m1Power = 20f;
+	public static float m2Power = 20f;
+	public static float m3Power = 20f;
+	public static float m4Power = 20f;
+	public static float m5Power = 20f;
+	public static float m6Power = 20f;
 //------------------------------------------
 
 	public static string duration;
@@ -360,7 +360,7 @@ public class Settings : MonoBehaviour
 		case "BackgroundMd":
 //			print(name+": "+value);
 			stimM = value;
-			Settings.Instance.cross.transform.localScale = new Vector3(3f,3f,1f);
+			Settings.Instance.cross.transform.localScale = new Vector3(1f,1f,1f);
 			Settings.Instance.cross.transform.localPosition = new Vector3(0f, 1.93f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(3f,3f,1f);
 			Settings.Instance.leftarrow.transform.localPosition = new Vector3(0.16f, 1.98f, 2.21f);
@@ -374,7 +374,7 @@ public class Settings : MonoBehaviour
 			print(name+": "+value);
 			stimL = value;
 			// change stim size to L
-			Settings.Instance.cross.transform.localScale = new Vector3(5f,5f,1f);
+			Settings.Instance.cross.transform.localScale = new Vector3(1f,1f,1f);
 			Settings.Instance.cross.transform.localPosition = new Vector3(0f, 6.35f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(5f,5f,1f);
 			Settings.Instance.leftarrow.transform.localPosition = new Vector3(0.16f, 6.52f, 2.21f);
