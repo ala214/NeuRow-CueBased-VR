@@ -49,7 +49,8 @@ public class WayPoints : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		trajectory += System.DateTime.Now.Ticks + "," + Scoring.upTime + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
+		//trajectory += System.DateTime.Now.Ticks + "," + Scoring.upTime + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
+		trajectory += System.DateTime.Now.Ticks + "," + Scoring.duration + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -126,7 +127,7 @@ public class WayPoints : MonoBehaviour
 
 //---------------------------------------------------------------------------		
 //	WILL NEED TO COME BACK AND FIX FOR LOG SAVING FROM MAIN MENU		
-//		System.IO.File.AppendAllText(Settings.logDir+"\\" + fileName + ".txt", trajectory);
+		System.IO.File.AppendAllText(Settings.logDir+"\\" + fileName + ".txt", trajectory);
 	}
 
 }

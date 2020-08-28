@@ -162,13 +162,13 @@ public static Scoring Instance;
 					}
 
 					// REWARDS
-					if(rewardAvg > 0.0f && rewardAvg <= 0.35f){
+					if(rewardAvg > 0.0f && rewardAvg <= 0.55f){
 	//					Debug.Log("averageScore<65 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+1";
 						tempScore = 1;
 	//					Debug.Log("tempScore: "+tempScore);
 					}
-					else if(rewardAvg >= 0.35f && rewardAvg <= 0.55f){
+					else if(rewardAvg > 0.55f && rewardAvg <= 0.85f){
 	//					Debug.Log("averageScore>=65 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+5";
 						tempScore = 5;
