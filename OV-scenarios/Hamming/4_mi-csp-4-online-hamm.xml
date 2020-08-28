@@ -591,11 +591,15 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>256</Value>
+					<Value>208</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
 					<Value></Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
+					<Value>1</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -1277,7 +1281,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/Downloads/Lisbon_data/Lisbon_data/BCI_test/4_online/online-FB.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/4_online/online-FB.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -1298,15 +1302,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>240</Value>
+					<Value>224</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>432</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
-					<Value>1</Value>
+					<Value>336</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3404,11 +3404,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>1232</Value>
+					<Value>1248</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>-160</Value>
+					<Value>-192</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3449,17 +3449,6 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x5bdc6ef9, 0x5aa3869b)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x0000057e, 0x00006236)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3508,6 +3497,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00000f27, 0x00006f45)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x00001205, 0x0000066d)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x00006b53, 0x00006c1d)</BoxIdentifier>
@@ -3552,13 +3552,24 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x0000207e, 0x00005483)</Identifier>
+			<Identifier>(0x00001d1c, 0x00004b98)</Identifier>
 			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00001f50, 0x00004acd)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
 				<BoxOutputIndex>1</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
+				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3625,28 +3636,6 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2fd)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x0000324e, 0x00000029)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00001560, 0x00006f76)</BoxIdentifier>
-				<BoxInputIndex>1</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x00003777, 0x00006ca2)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3783,6 +3772,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00005511, 0x0000035f)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001560, 0x00006f76)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x00005824, 0x000055ae)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
@@ -3812,17 +3812,6 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x00001ab0, 0x0000236f)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x00005e74, 0x00003864)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3912,6 +3901,17 @@
 			<Target>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2fc)</BoxIdentifier>
 				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x000075d0, 0x0000737a)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>

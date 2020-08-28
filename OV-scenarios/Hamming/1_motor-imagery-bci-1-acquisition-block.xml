@@ -39,7 +39,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-80</Value>
+					<Value>-64</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
@@ -74,7 +74,7 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/AppData/Roaming/openvibe-2.2.0/scenarios/NeuRowCueVR/OV-scenarios/motor-imagery-bci-graz-stimulator-fmri-block.lua</Value>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/motor-imagery-bci-graz-stimulator-fmri-block.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -210,7 +210,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/AppData/Roaming/openvibe-2.2.0/scenarios/NeuRowCueVR/OV-scenarios/signals/block-motor-imagery-1-[$core{date}-$core{time}].ov</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/randomSignals/block-motor-imagery-1-[$core{date}-$core{time}].ov</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -271,7 +271,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/AppData/Roaming/openvibe-2.2.0/scenarios/NeuRowCueVR/OV-scenarios/signals/block-motor-imagery-block-1-[2020.07.29-14.13.55].gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/3_neurow/ROW-S01.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -394,11 +394,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-160</Value>
+					<Value>-128</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>816</Value>
+					<Value>800</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -514,7 +514,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue>record-[$core{date}-$core{time}].gdf</DefaultValue>
-					<Value>C:/Users/Audrey/AppData/Roaming/openvibe-2.2.0/scenarios/NeuRowCueVR/OV-scenarios/signals/block-motor-imagery-block-1-[$core{date}-$core{time}].gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/randomSignals/block-motor-imagery-block-1-[$core{date}-$core{time}].gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -712,11 +712,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-160</Value>
+					<Value>-96</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>611</Value>
+					<Value>528</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
