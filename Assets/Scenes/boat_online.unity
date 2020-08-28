@@ -24056,7 +24056,6 @@ GameObject:
   - component: {fileID: 438079613}
   - component: {fileID: 438079617}
   - component: {fileID: 438079614}
-  - component: {fileID: 438079615}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: gui
@@ -24102,36 +24101,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438079612}
   m_CullTransparentMesh: 0
---- !u!114 &438079615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438079612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 017b6d5f7bfe2ab49b0c74da0111cfe8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  gui: {fileID: 0}
-  scoregui: {fileID: 0}
-  traininggui: {fileID: 0}
-  waypoint: {fileID: 0}
-  arrow: {fileID: 0}
-  leap: {fileID: 0}
-  hands: {fileID: 0}
-  cross: {fileID: 90493970}
-  leftarrow: {fileID: 0}
-  rightarrow: {fileID: 0}
-  rMaleHand: {fileID: 0}
-  lMaleHand: {fileID: 0}
-  rFemaleHand: {fileID: 0}
-  lFemaleHand: {fileID: 0}
-  scaleChange: {x: 0, y: 0, z: 0}
-  dir: {fileID: 0}
-  levelDone: {fileID: 0}
 --- !u!223 &438079617
 Canvas:
   m_ObjectHideFlags: 0
@@ -31105,8 +31074,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567346704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 504.93726, y: -248.40346, z: -716.3987}
+  m_LocalRotation: {x: -0.0973324, y: 0.016421616, z: 0.0016061763, w: 0.99511516}
+  m_LocalPosition: {x: 542.2876, y: -655.7897, z: -1823.8751}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -31164,7 +31133,6 @@ GameObject:
   - component: {fileID: 569356383}
   - component: {fileID: 569356381}
   - component: {fileID: 569356382}
-  - component: {fileID: 569356387}
   m_Layer: 0
   m_Name: WayPoint
   m_TagString: waypoint
@@ -31277,102 +31245,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &569356387
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569356380}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ec7ee187a06db32418b1902cd01a146c, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &570773888
 GameObject:
   m_ObjectHideFlags: 0
@@ -55058,6 +54930,8 @@ MonoBehaviour:
   leftarrow: {fileID: 155432473}
   rightarrow: {fileID: 1559144268}
   RewardText: {fileID: 0}
+  trainingPanel: {fileID: 0}
+  sceneName: 
 --- !u!1 &1317798572
 GameObject:
   m_ObjectHideFlags: 0

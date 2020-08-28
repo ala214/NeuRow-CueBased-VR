@@ -118,7 +118,7 @@ public class Settings : MonoBehaviour
 			leapOn = false;
 			noAPE = true;
 			reverseHands = true;
-			//Debug.Log("Game Mode");
+			Debug.Log("Game Mode!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 //			gamePause();
 		}
 //		else if(Application.loadedLevelName == "Game_With_APE") // BCI MODE

@@ -217,7 +217,7 @@ public static Scoring Instance;
 //					MoveBoat.countW = 0;
 					if (crossCount == 4){
 	//					Debug.Log("reseting crossCount!!!!!!!!!!!!!!!!!");
-						fScore += tempScore;
+						//fScore += tempScore;
 						crossCount = 0;
 						avgTotal = 0;
 						avgAvg = 0;

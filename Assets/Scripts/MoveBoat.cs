@@ -21,6 +21,8 @@ public class MoveBoat : MonoBehaviour {
 	public GameObject RewardText;
 	public static bool case800, case786, cross, left, right, hidearrow = false;
 	public static bool training;
+	public GameObject trainingPanel;
+	public string sceneName;
 
 
 	// Use this for initialization
@@ -39,17 +41,25 @@ public class MoveBoat : MonoBehaviour {
 		leftarrow.SetActive(false);
 		rightarrow.SetActive(false);
 
+		// HAS TO BE COMMENTED OUT FOR TRAINING ....
 		RewardText = GameObject.Find("RewardText");
 		RewardText.SetActive(false);
+		// ------------------------------------------
 
 
+		
+		Debug.Log ("about to call scenemanager!!!!!!!!!!!!!!!!!!");
 		// check scene name to enable training
-		if (SceneManager.GetActiveScene().name == "boat_online") 
+		if (SceneManager.GetActiveScene().name == "boat_online") {
+			Debug.Log ("boat is online!!!!!!!!!!!!!!!!!!");
 			training = false;
-		else
+		} 
+		else {
 			training = true;
+			Debug.Log ("boat is training!!!!!!!!!!!!!!!!!!");
+		}
 
-		Debug.Log ("scene: " + SceneManager.GetActiveScene().name);
+//		Debug.Log ("scene: " + SceneManager.GetActiveScene().name);
 	}
 	
 	// Update is called once per frame
