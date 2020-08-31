@@ -42,8 +42,8 @@ public class MoveBoat : MonoBehaviour {
 		rightarrow.SetActive(false);
 
 		// HAS TO BE COMMENTED OUT FOR TRAINING ....-------------------------------------------
-		RewardText = GameObject.Find("RewardText");
-		RewardText.SetActive(false);
+//		RewardText = GameObject.Find("RewardText");
+//		RewardText.SetActive(false);
 		// ------------------------------------------------------------------------------------
 
 
