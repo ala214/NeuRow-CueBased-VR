@@ -49,7 +49,7 @@ public class Settings : MonoBehaviour
 	public static bool stimL;
 	public static bool points;
 	public static bool percentage;
-	public static bool flash = false;	// change to true for default SSVEP
+	public static bool flash = true;	// change to true for default SSVEP
 //------------------------------------------
 
 //Network Settings -------------------------
@@ -377,11 +377,11 @@ public class Settings : MonoBehaviour
 			stimL = value;
 			// change stim size to L
 			Settings.Instance.cross.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 6.35f, -0.95f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 7.7f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.4f, 6.52f, 2.21f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.4f, 8f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(26.8f, 6.52f, 2.21f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(26.8f, 8f, 2.21f);
 //			Settings.Instance.rewardtext.fontSize = 75.0f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(2f,2f,1f);
 			break;
