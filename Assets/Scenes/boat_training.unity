@@ -1491,7 +1491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reflection: {fileID: 0}
+  reflection: {fileID: 1861481835}
   waterBase: {fileID: 1861481834}
 --- !u!23 &88748777
 MeshRenderer:
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reflection: {fileID: 0}
+  reflection: {fileID: 1861481835}
   waterBase: {fileID: 1861481834}
 --- !u!23 &110390222
 MeshRenderer:
@@ -11410,7 +11410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429861950}
   m_LocalRotation: {x: 0.056774683, y: 2.5352788e-24, z: -1.441722e-25, w: 0.99838704}
-  m_LocalPosition: {x: 1.3499999, y: 1.7690141, z: -4.062338}
+  m_LocalPosition: {x: 0.26, y: 1.77, z: -4.06}
   m_LocalScale: {x: 0.9988044, y: 0.9987998, z: 1.0000046}
   m_Children:
   - {fileID: 1180564736}
@@ -12092,8 +12092,9 @@ MonoBehaviour:
   fireworks: {fileID: 0}
   rewardtext: {fileID: 0}
   scoreText: {fileID: 0}
+  finalScoreText: {fileID: 0}
   rocket: {fileID: 0}
-  defRewText: {fileID: 0}
+  defTextPos: {fileID: 0}
 --- !u!114 &468851683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18102,8 +18103,8 @@ Camera:
   m_GameObject: {fileID: 567346704}
   m_Enabled: 0
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -18123,7 +18124,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967279
+    m_Bits: 0
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -18142,8 +18143,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567346704}
-  m_LocalRotation: {x: 0.10627194, y: 0.022370113, z: 0.002391497, w: -0.99408257}
-  m_LocalPosition: {x: 3.9340248, y: -218.17905, z: -593.0353}
+  m_LocalRotation: {x: -0.02539302, y: 0.70813364, z: 0.025508862, w: 0.70516044}
+  m_LocalPosition: {x: -46.82653, y: -12.886181, z: -20.353935}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -44996,17 +44997,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 825249597}
-  m_LocalRotation: {x: 0.35028327, y: -0, z: -0, w: 0.9366438}
-  m_LocalPosition: {x: 0, y: 0, z: -30.61513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 541355205}
   m_Father: {fileID: 902472176}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 41.009003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.9, y: 2.4409027}
+  m_AnchoredPosition: {x: -0.89, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825249599
@@ -50910,7 +50911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &968772955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51295,7 +51296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reflection: {fileID: 0}
+  reflection: {fileID: 1861481835}
   waterBase: {fileID: 1861481834}
 --- !u!23 &989478358
 MeshRenderer:
@@ -51404,7 +51405,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993559087}
   m_LocalRotation: {x: 0.056774683, y: 2.5352788e-24, z: -1.441722e-25, w: 0.99838704}
-  m_LocalPosition: {x: 1.3500001, y: 1.7690141, z: -4.062338}
+  m_LocalPosition: {x: 0.17, y: 1.77, z: -4.06}
   m_LocalScale: {x: 0.99880445, y: 0.99880433, z: 1}
   m_Children:
   - {fileID: 1204272568}
@@ -51513,7 +51514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998215808}
   m_LocalRotation: {x: 0.10729984, y: -0.002974573, z: 0.00032106688, w: 0.9942222}
-  m_LocalPosition: {x: -1.2999985, y: 4.690008, z: -17.400003}
+  m_LocalPosition: {x: -1.29, y: 5.2, z: -19.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1317726000}
@@ -56700,17 +56701,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039261378}
-  m_LocalRotation: {x: 0.35028327, y: -0, z: -0, w: 0.9366438}
-  m_LocalPosition: {x: 0, y: 0, z: -33.080463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1700465606}
   m_Father: {fileID: 902472176}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 41.009003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.04, y: 4.0038853}
+  m_AnchoredPosition: {x: -0.9299998, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &1039261380
@@ -62792,17 +62793,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124590574}
-  m_LocalRotation: {x: 0.35028327, y: -0, z: -0, w: 0.9366438}
-  m_LocalPosition: {x: 0, y: 0, z: -30.61513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1789376535}
   m_Father: {fileID: 902472176}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 41.009003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.479999, y: 2.4409027}
+  m_AnchoredPosition: {x: 4.7, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1124590576
@@ -72092,7 +72093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a91e8dd37cdd41efb4859b65aced7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reflection: {fileID: 0}
+  reflection: {fileID: 1861481835}
   waterBase: {fileID: 1861481834}
 --- !u!23 &1365381406
 MeshRenderer:
@@ -72505,7 +72506,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1392325520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -83940,7 +83941,7 @@ GameObject:
   - component: {fileID: 1477209434}
   - component: {fileID: 1477209433}
   m_Layer: 5
-  m_Name: Label flash
+  m_Name: Label Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90046,7 +90047,7 @@ GameObject:
   - component: {fileID: 1649101810}
   - component: {fileID: 1649101809}
   m_Layer: 5
-  m_Name: CheckmarkS
+  m_Name: CheckmarkFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95199,6 +95200,10 @@ PrefabInstance:
     - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_Name
       value: OVRCameraRig
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -101914,6 +101919,7 @@ GameObject:
   - component: {fileID: 1861481833}
   - component: {fileID: 1861481834}
   - component: {fileID: 1861481838}
+  - component: {fileID: 1861481835}
   - component: {fileID: 1861481837}
   - component: {fileID: 1861481836}
   m_Layer: 0
@@ -101959,6 +101965,25 @@ MonoBehaviour:
   sharedMaterial: {fileID: 2100000, guid: 4e1467e748fa74c64b96759b3d9713ae, type: 2}
   waterQuality: 2
   edgeBlend: 1
+--- !u!114 &1861481835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861481832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4185bc77c7194462ca3b1097ef4a5de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  reflectSkybox: 0
+  clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  reflectionSampler: _ReflectionTex
+  clipPlaneOffset: 0.07
 --- !u!114 &1861481836
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -50,7 +50,8 @@ public class WayPoints : MonoBehaviour
 	void Update ()
 	{
 		//trajectory += System.DateTime.Now.Ticks + "," + Scoring.upTime + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
-		trajectory += System.DateTime.Now.Ticks + "," + Scoring.duration + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
+		trajectory += System.DateTime.Now.Ticks + "," + Scoring.upTime + "," + Scoring.curr_score + "," + player.position.x + "," + player.position.z + "," + transform.position.x + "," + transform.position.z + "\n";
+		//Debug.Log ("trajectory: " + trajectory);
 	}
 
 	void OnTriggerEnter(Collider other)
@@ -59,10 +60,11 @@ public class WayPoints : MonoBehaviour
 		{
 			//Scoring.Add();
 			NewPosition();
-//			newPositionFixed();
+			//newPositionFixed();
 			GetComponent<AudioSource>().Play(); 
 		}
 	}
+
 
 //	void newPositionFixed()
 //	{
@@ -122,6 +124,7 @@ public class WayPoints : MonoBehaviour
 
 	void OnDisable()
 	{
+		Debug.Log ("in the file saving part of waypoints");
 		string fileName = "trajectory_" + System.DateTime.Now.Year + "-" + System.DateTime.Now.Month + "-" + System.DateTime.Now.Day + "_" + System.DateTime.Now.Hour + "-" + System.DateTime.Now.Minute + "-" + System.DateTime.Now.Second;
 //		print(Application.persistentDataPath);
 

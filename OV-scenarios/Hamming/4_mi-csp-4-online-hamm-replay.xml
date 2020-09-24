@@ -143,7 +143,7 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Desktop/NeuRow/OVScenarios/motor-imagery-bci-epoch-selector.lua</Value>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/motor-imagery-bci-epoch-selector.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -1281,7 +1281,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Desktop/NeuRow/4_online/online-S01.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/4_online/online-S01.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -2985,7 +2985,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x8d21ff41, 0xdf6afe7e)</Identifier>
-					<Value>C:/Users/neuro/Desktop/NeuRow/3_neurow/ROW-S01-csp.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/3_neurow/ROW-S01-csp.gdf</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
@@ -3089,7 +3089,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename to load configuration from</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Desktop/NeuRow/3_neurow/ROW-S01-class.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/3_neurow/ROW-S01-class.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>

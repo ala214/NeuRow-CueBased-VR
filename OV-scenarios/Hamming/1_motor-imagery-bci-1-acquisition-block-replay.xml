@@ -74,7 +74,7 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Documents/Neurow2020/OVScenarios/motor-imagery-bci-graz-stimulator-fmri-block.lua</Value>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/motor-imagery-bci-graz-stimulator-fmri.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -210,7 +210,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Documents/NeuRow2020/Data/random/[$core{date}-$core{time}].gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/randomSignals/[$core{date}-$core{time}].gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -271,7 +271,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Desktop/NeuRow/3_neurow/ROW-FB.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/3_neurow/ROW-S01.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -514,7 +514,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue>record-[$core{date}-$core{time}].gdf</DefaultValue>
-					<Value>C:/Users/neuro/Documents/Neurow2020/Data/random/[$core{date}-$core{time}].gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/randomSignals/[$core{date}-$core{time}].gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>

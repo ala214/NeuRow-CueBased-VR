@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveReward : MonoBehaviour {
 
 	//------TESTING-------------------
-	public static float speed = 10.0f;
+	//public static float speed = 10.0f;
 	public static bool move = false;
 	public Transform defTextPos;
 
@@ -21,7 +21,9 @@ public class MoveReward : MonoBehaviour {
 //		transform.position = Settings.Instance.rewardtext.transform.position;
 //		target = Settings.Instance.cross.transform;
 
-		defTextPos.position = Scoring.Instance.rewardtext.transform.position;
+		// desired position for final score: -635.3996, -548, 300
+		defTextPos.position = Scoring.Instance.scoreText.transform.position;
+
 	}
 	
 

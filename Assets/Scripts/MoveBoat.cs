@@ -207,6 +207,7 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(true);
+			OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
 			cross= true;
 			left = false;
 			right = true;
@@ -216,6 +217,7 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(true);
 			rightarrow.SetActive(false);
+			OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
 			cross= true; 
 			left = true;
 			right = false;
@@ -225,6 +227,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(false);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			cross= true;
 			hidearrow = true;
 			//left= false;

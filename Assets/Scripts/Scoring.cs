@@ -33,9 +33,11 @@ public class Scoring : MonoBehaviour
 	public GameObject fireworks;
 	public GameObject rewardtext;
 	public GameObject scoreText;
+	public GameObject finalScoreText;
 	public GameObject rocket;
 	public static bool fireDisplay = false;
-	public Transform defRewText;
+	public static bool once = false;
+	public Transform defTextPos;
 
 
 // count = countR + countL;
@@ -49,10 +51,13 @@ public static Scoring Instance;
 		fireworks = GameObject.Find("Fireworks");
 		rewardtext.SetActive(false);
 		fireworks.SetActive(false);
-		rocket = GameObject.Find ("Sparkles5");
+		rocket = GameObject.Find("Sparkles5");
 		scoreText = GameObject.Find("ScoreText");
+		finalScoreText = GameObject.Find("FinalScore");
+
 		//scoreText.SetActive(true);
-		//defRewText.position = rewardtext.transform.position;
+		Debug.Log ("First Move!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		finalScoreText.transform.localPosition = new Vector3(0f,-150f,0f);
 
 
 //		if(SCORE != null)
@@ -100,7 +105,7 @@ public static Scoring Instance;
 //			Debug.Log("countL "+MoveBoat.countL);
 //			Debug.Log("countW "+MoveBoat.countW);
 
-			if(count > 0){
+			//if(count > 0){
 	//			Debug.Log("inside count>0");
 //				curr_score = ""+waypoints;
 				curr_score = ""+fScore;
@@ -110,7 +115,7 @@ public static Scoring Instance;
 //				Debug.Log("count: "+count);
 //				avgScore = (float)count / (count + MoveBoat.countW);
 //				Debug.Log("averageScore "+avgScore);
-			}
+			//}
 
 			//---- how to know if b/w blocks vs. b/w cues in block?------------------
 			if(!MoveBoat.training){ //show reward
@@ -119,8 +124,8 @@ public static Scoring Instance;
 
 				// update final score
 				if(temp == 0 && MoveBoat.case786){	//786 = show cross
-					//Debug.Log("case786");
-					fScore += tempScore;
+					Debug.Log("case786");
+			//		fScore += tempScore;
 	//				Debug.Log("finalScore: "+scoreText.GetComponent<Text>().text);
 				}
 
@@ -131,11 +136,12 @@ public static Scoring Instance;
 				}
 // CROSS COUNT
 				if(temp > 0 && MoveBoat.case800){
-	//				Debug.Log("entering cross count");
+					Debug.Log("entering cross count");
 					temp = 0;
 					crossCount += 1;	// counting # cues for block
 					avgScore = (float)count / (count + MoveBoat.countW);
 					avgTotal += avgScore;
+					once = true;
 					
 	//				Debug.Log("crossCount from cross count: "+crossCount);
 	//				Debug.Log("avgScore: "+avgScore);
@@ -143,7 +149,7 @@ public static Scoring Instance;
 				}
 
 				if(crossCount >= 1 && MoveBoat.case800){
-	//				Debug.Log("inside reward scoring");
+					Debug.Log("inside reward scoring");
 //					Debug.Log("average score: "+avgScore);
 // INSIDE REWARD
 					if(crossCount == 4){
@@ -175,8 +181,16 @@ public static Scoring Instance;
 	//					Debug.Log("tempScore: "+tempScore);
 					} 
 				//}
-// SHOW REWARD
+// SHOW REWARD		
+					Debug.Log("show before reward---------------------------------");
 					rewardtext.SetActive(true);
+					Debug.Log("show reward---------------------------------");
+					if(once == true){
+						fScore += tempScore;
+						once = false;
+					}
+					//scoreText.SetActive(true);
+					finalScoreText.transform.localPosition = new Vector3(0f,0f,0f);
 					//Debug.Log("crossCount: "+crossCount);
 
 					if(crossCount == 4){
@@ -195,6 +209,8 @@ public static Scoring Instance;
 // HIDE				Debug.Log("MoveBoat.cross "+MoveBoat.cross);
 	//				Debug.Log("inside hide reward");
 					rewardtext.SetActive(false);
+					//scoreText.SetActive(false);
+					finalScoreText.transform.localPosition = new Vector3(0f,-150f,0f);
 // MOVE POINTS
 //					if(fireDisplay == true){
 //						rewardtext.transform.position = new Vector3(rewardtext.transform.position.x, rewardtext.transform.position.y + 290.48f, rewardtext.transform.position.z);
