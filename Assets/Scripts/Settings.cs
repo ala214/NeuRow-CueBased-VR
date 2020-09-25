@@ -41,7 +41,7 @@ public class Settings : MonoBehaviour
 	static bool audioOn;
 	static bool musicOn;  // for future if music is used
 	public static bool reverseHands;
-	public static bool haptic;
+	public static bool haptic = true;
 	public static bool male;
 	public static bool female;
 	public static bool stimS;
@@ -317,7 +317,7 @@ public class Settings : MonoBehaviour
 				waveSound.Pause();
 			break;
 		case "BackgroundHap":
-			print(name+": "+value);
+			print("Haptic: "+value);
 			haptic = value;
 			break;
 		case "BackgroundMusic":  // for future if music used

@@ -23,6 +23,7 @@ public class MoveBoat : MonoBehaviour {
 	public static bool training;
 	public GameObject trainingPanel;
 	public string sceneName;
+	//Toggle BackgroundHap;
 
 
 	// Use this for initialization
@@ -37,6 +38,7 @@ public class MoveBoat : MonoBehaviour {
 		crossui = GameObject.Find ("CrossVR");
 		leftarrow = GameObject.Find ("LeftArrowVR");
 		rightarrow = GameObject.Find ("RightArrowVR");
+		//BackgroundHap = GetComponent<Toggle>();
 		crossui.SetActive(false);
 		leftarrow.SetActive(false);
 		rightarrow.SetActive(false);
@@ -207,7 +209,11 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(true);
-			OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+			//if(BackgroundHap.isOn){
+			if(Settings.haptic){
+				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+				Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			}
 			cross= true;
 			left = false;
 			right = true;
@@ -217,7 +223,10 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(true);
 			rightarrow.SetActive(false);
-			OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+			if(Settings.haptic){
+				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+				Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			}
 			cross= true; 
 			left = true;
 			right = false;
@@ -274,6 +283,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(true);
+			if(Settings.haptic)
+				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
 			cross= true;
 			left = false;
 			right = true;
@@ -285,6 +296,10 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(true);
 			rightarrow.SetActive(false);
+			if(Settings.haptic){
+				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+				Debug.Log ("using online left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			}
 			cross= true;
 			left = true;
 			right = false;
@@ -296,6 +311,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(false);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			cross= true;
 			hidearrow = true;
 			case800 = false;
