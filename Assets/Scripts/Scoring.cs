@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// used
+
 public class Scoring : MonoBehaviour
 {
 	public static Scoring SCORE;

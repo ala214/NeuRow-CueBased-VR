@@ -8,6 +8,8 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 
+// not used
+
 public class UDPReceive : MonoBehaviour {
 
  // receiving Thread

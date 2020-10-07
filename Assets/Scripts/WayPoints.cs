@@ -1,6 +1,7 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+
+// used
 
 public class WayPoints : MonoBehaviour
 {

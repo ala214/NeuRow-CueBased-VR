@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// not used
+
 public class GetStimulus : MonoBehaviour {
 
 	public Image cross, leftarrow, rightarrow;
@@ -14,7 +16,6 @@ public class GetStimulus : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 		cross.enabled = false;
 		leftarrow.enabled = false;
 		rightarrow.enabled = false;

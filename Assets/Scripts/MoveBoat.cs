@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
+// used
+
 public class MoveBoat : MonoBehaviour {
 
 	public static float boatspeed = 5f;//default = 5

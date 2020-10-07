@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// used
+
 public class MoveHands : MonoBehaviour {
 
 	public GameObject leftRow;

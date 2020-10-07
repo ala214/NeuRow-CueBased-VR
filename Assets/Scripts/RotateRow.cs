@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// used
+
 public class RotateRow : MonoBehaviour {
 
 	public static  float speed = 300f;
@@ -15,7 +17,7 @@ public class RotateRow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 		angleOffset = 90.0f;
 		initRotationL = GameObject.FindGameObjectWithTag ("LeftRow").transform.localRotation;
 		initRotationR = GameObject.FindGameObjectWithTag ("RightRow").transform.localRotation;

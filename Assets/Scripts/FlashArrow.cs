@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// used
+
 public class FlashArrow : MonoBehaviour {
 	public static int stimB;
 	public static int fps_countL = 0; 
