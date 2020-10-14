@@ -14,8 +14,10 @@ public class FlashArrow : MonoBehaviour {
 
 	
 	void Start () {	
-		arrowL = GameObject.Find("LeftArrowVR");
-		arrowR = GameObject.Find("RightArrowVR");
+		//arrowL = GameObject.Find("LeftArrowVR");
+		//arrowR = GameObject.Find("RightArrowVR");
+		arrowL = GameObject.Find("arrowLF");
+		arrowR = GameObject.Find("arrowRF");
 		Debug.Log("Flash Arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 	}
 	

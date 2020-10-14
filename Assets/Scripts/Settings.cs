@@ -152,14 +152,14 @@ public class Settings : MonoBehaviour
 		scoregui.SetActive (true);
 		Time.timeScale = 0f;
 		waveSound.PlayOneShot (levelDone); 
-		//Debug.Log ("SCORE!");
+		Debug.Log ("showScorePanel---------------------------------");
 	}
 
 	void showEndOfTraining(){
 		traininggui.SetActive (true);
 		Time.timeScale = 0f;
 		waveSound.PlayOneShot (levelDone); 
-		//Debug.Log ("SCORE!");
+		Debug.Log ("showEndOfTraining-------------------------------");
 	}
 
 	void hideScorePanel(){
@@ -366,11 +366,11 @@ public class Settings : MonoBehaviour
 //			print(name+": "+value);
 			stimM = value;
 			Settings.Instance.cross.transform.localScale = new Vector3(3f,3f,1f);
-			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 1.93f, -0.95f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 4.05f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(3f,3f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.6f, 1.98f, 2.21f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.6f, 4.1f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(3f,3f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(15.6299f, 1.98f, 2.21f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(15.6299f, 4.1f, 2.21f);
 //			Settings.Instance.rewardtext.fontSize = 50.0f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(1f,1f,1f);
 			break;
@@ -380,11 +380,11 @@ public class Settings : MonoBehaviour
 			stimL = value;
 			// change stim size to L
 			Settings.Instance.cross.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 7.7f, -0.95f);
+			Settings.Instance.cross.transform.localPosition = new Vector3(-0.94f, 8.7f, -0.95f);
 			Settings.Instance.leftarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.4f, 8f, 2.21f);
+			Settings.Instance.leftarrow.transform.localPosition = new Vector3(-0.4f, 9f, 2.21f);
 			Settings.Instance.rightarrow.transform.localScale = new Vector3(5f,5f,1f);
-			Settings.Instance.rightarrow.transform.localPosition = new Vector3(26.8f, 8f, 2.21f);
+			Settings.Instance.rightarrow.transform.localPosition = new Vector3(26.8f, 9f, 2.21f);
 //			Settings.Instance.rewardtext.fontSize = 75.0f;
 //			Settings.Instance.rewardtext.transform.localScale = new Vector3(2f,2f,1f);
 			break;

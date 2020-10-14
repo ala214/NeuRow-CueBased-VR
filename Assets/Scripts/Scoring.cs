@@ -58,7 +58,7 @@ public static Scoring Instance;
 		finalScoreText = GameObject.Find("FinalScore");
 
 		//scoreText.SetActive(true);
-		Debug.Log ("First Move!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		//Debug.Log ("First Move!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		finalScoreText.transform.localPosition = new Vector3(0f,-150f,0f);
 
 
@@ -80,10 +80,10 @@ public static Scoring Instance;
 
 	void Update()
 	{
-		Debug.Log("inside scoring update");
+		//Debug.Log("inside scoring update");
 		if(scoreText != null)
 		{
-			Debug.Log("inside score!=null");
+			//Debug.Log("inside score!=null");
 			duration -= Time.deltaTime;
 			if(duration < 0)
 			{
@@ -126,7 +126,7 @@ public static Scoring Instance;
 
 				// update final score
 				if(temp == 0 && MoveBoat.case786){	//786 = show cross
-					Debug.Log("case786");
+					//Debug.Log("case786");
 			//		fScore += tempScore;
 	//				Debug.Log("finalScore: "+scoreText.GetComponent<Text>().text);
 				}
@@ -138,7 +138,7 @@ public static Scoring Instance;
 				}
 // CROSS COUNT
 				if(temp > 0 && MoveBoat.case800){
-					Debug.Log("entering cross count");
+					//Debug.Log("entering cross count");
 					temp = 0;
 					crossCount += 1;	// counting # cues for block
 					avgScore = (float)count / (count + MoveBoat.countW);
@@ -151,7 +151,7 @@ public static Scoring Instance;
 				}
 
 				if(crossCount >= 1 && MoveBoat.case800){
-					Debug.Log("inside reward scoring");
+					//Debug.Log("inside reward scoring");
 //					Debug.Log("average score: "+avgScore);
 // INSIDE REWARD
 					if(crossCount == 4){
@@ -184,9 +184,9 @@ public static Scoring Instance;
 					} 
 				//}
 // SHOW REWARD		
-					Debug.Log("show before reward---------------------------------");
+					//Debug.Log("show before reward---------------------------------");
 					rewardtext.SetActive(true);
-					Debug.Log("show reward---------------------------------");
+					//Debug.Log("show reward---------------------------------");
 					if(once == true){
 						fScore += tempScore;
 						once = false;
@@ -196,7 +196,7 @@ public static Scoring Instance;
 					//Debug.Log("crossCount: "+crossCount);
 
 					if(crossCount == 4){
-						Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
+						//Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
 						fireDisplay = true;
 						fireworks.SetActive(true);
 						// move reward text to fixed cross position
