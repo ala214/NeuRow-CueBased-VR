@@ -109,6 +109,13 @@ public class MoveBoat : MonoBehaviour {
 			if (Input.GetKey (KeyCode.LeftArrow) || (left  && hidearrow)) {
 				left = true;
 				//			right = false;
+
+				// Oculus left haptic feedback
+				if(Settings.haptic){
+					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+					Debug.Log ("using training left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				}
+
 				if (!Settings.reverseHands)
 					transform.Rotate (Vector3.up * turnspeed * Time.deltaTime, Space.World);
 				else
@@ -118,6 +125,11 @@ public class MoveBoat : MonoBehaviour {
 			if (Input.GetKey (KeyCode.RightArrow) || (right && hidearrow)) {
 				//			left = false;
 				right = true;
+
+				// Oculus right haptic feedback
+				if(Settings.haptic)
+					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+
 				if (!Settings.reverseHands)
 					transform.Rotate (Vector3.down * turnspeed * Time.deltaTime, Space.World);
 				else
@@ -147,6 +159,13 @@ public class MoveBoat : MonoBehaviour {
 				Debug.Log("inside left arrow");
 				countL += 1;	// scoring - left rows
 				//			right = false;
+
+				// Oculus left haptic feedback
+				if(Settings.haptic){
+					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+					Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				}
+
 				if(!Settings.reverseHands)
 					transform.Rotate (Vector3.up * turnspeed * Time.deltaTime, Space.World);
 				else
@@ -155,16 +174,23 @@ public class MoveBoat : MonoBehaviour {
 			}
 			else if (Input.GetKey (KeyCode.RightArrow) ||(right && hidearrow) && ldaSignal()<=0) {
 				//			left = false;
-
 				right = true;
 				Debug.Log("inside right arrow");
 				countR += 1;	// scoring - right rows
+
+				// Oculus right haptic feedback
+				if(Settings.haptic){
+					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+					Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				}
+
 				if(!Settings.reverseHands)
 					transform.Rotate (Vector3.down * turnspeed * Time.deltaTime, Space.World);
 				else
 					transform.Rotate (Vector3.up * turnspeed * Time.deltaTime, Space.World);
 				//	transform.Translate(Vector3.forward * boatspeed * Time.deltaTime);
 			}
+
 			else {
 				if(hidearrow)
 					countW += 1;
@@ -190,6 +216,8 @@ public class MoveBoat : MonoBehaviour {
 		switch (stim)
 		{
 		case 800: //hide cross
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			crossui.SetActive(false);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(false);
@@ -211,11 +239,10 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(true);
-			//if(BackgroundHap.isOn){
-			if(Settings.haptic){
-				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
-				Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			}
+			//if(Settings.haptic){
+			//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+			//	Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			//}
 			cross= true;
 			left = false;
 			right = true;
@@ -225,10 +252,10 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(true);
 			rightarrow.SetActive(false);
-			if(Settings.haptic){
-				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-				Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			}
+			//if(Settings.haptic){
+			//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+			//	Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			//}
 			cross= true; 
 			left = true;
 			right = false;
@@ -238,8 +265,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(false);
-			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			cross= true;
 			hidearrow = true;
 			//left= false;
@@ -269,6 +296,8 @@ public class MoveBoat : MonoBehaviour {
 			hidearrow = false;
 			case800 = true;
 			case786 = false;
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			break;
 		case 786: // show cross
 			crossui.SetActive(true);
@@ -285,8 +314,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(true);
-			if(Settings.haptic)
-				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+			//if(Settings.haptic)
+			//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
 			cross= true;
 			left = false;
 			right = true;
@@ -298,10 +327,10 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(true);
 			rightarrow.SetActive(false);
-			if(Settings.haptic){
-				OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-				Debug.Log ("using online left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-			}
+			//if(Settings.haptic){
+			//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+			//	Debug.Log ("using online left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			//}
 			cross= true;
 			left = true;
 			right = false;
@@ -313,8 +342,8 @@ public class MoveBoat : MonoBehaviour {
 			crossui.SetActive(true);
 			leftarrow.SetActive(false);
 			rightarrow.SetActive(false);
-			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
-			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
+			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
+			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			cross= true;
 			hidearrow = true;
 			case800 = false;
