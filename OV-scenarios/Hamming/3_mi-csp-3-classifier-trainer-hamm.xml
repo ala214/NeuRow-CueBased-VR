@@ -633,11 +633,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>464</Value>
+					<Value>304</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>896</Value>
+					<Value>944</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -850,19 +850,15 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>144</Value>
+					<Value>160</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>656</Value>
+					<Value>688</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
 					<Value></Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
-					<Value>1</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -1898,7 +1894,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Epoch offset (in sec)</Name>
 					<DefaultValue>0.5</DefaultValue>
-					<Value>0.5</Value>
+					<Value>0.1</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3066,7 +3062,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>High cut frequency (Hz)</Name>
 					<DefaultValue>40</DefaultValue>
-					<Value>30</Value>
+					<Value>45</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3136,7 +3132,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Epoch offset (in sec)</Name>
 					<DefaultValue>0.5</DefaultValue>
-					<Value>0.5</Value>
+					<Value>0.1</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3463,17 +3459,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00002bc5, 0x00004304)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x312e1662, 0x0673d431)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x38f7f16e, 0x716e5783)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00002bd0, 0x000012e5)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x00006c94, 0x00007158)</BoxIdentifier>
@@ -3617,6 +3602,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00005697, 0x00005d99)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x312e1662, 0x0673d431)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004a5b, 0x00006206)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x000058c7, 0x00004f53)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2ff)</BoxIdentifier>
@@ -3713,6 +3709,17 @@
 			<Target>
 				<BoxIdentifier>(0x04a03512, 0x1acdb302)</BoxIdentifier>
 				<BoxInputIndex>2</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006658, 0x00003a10)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004a5b, 0x00006206)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x38f7f16e, 0x716e5783)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -3994,7 +4001,7 @@
 	<Comments>
 		<Comment>
 			<Identifier>(0x000028b4, 0x000018e2)</Identifier>
-			<Text>8-30Hz</Text>
+			<Text>8-45 Hz</Text>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>

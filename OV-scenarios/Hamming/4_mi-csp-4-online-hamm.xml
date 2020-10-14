@@ -150,7 +150,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>offset</Name>
 					<DefaultValue>0.5</DefaultValue>
-					<Value>0.5</Value>
+					<Value>0.1</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -485,59 +485,6 @@
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
 					<Value>544</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
-					<Value>(0xcb2933f5, 0x2180a23d)</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
-					<Value>2</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
-					<Value>2</Value>
-				</Attribute>
-			</Attributes>
-		</Box>
-		<Box>
-			<Identifier>(0x00001560, 0x00006f76)</Identifier>
-			<Name>LSL Export</Name>
-			<AlgorithmClassIdentifier>(0x6f3467ff, 0x52794da6)</AlgorithmClassIdentifier>
-			<Inputs>
-				<Input>
-					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
-					<Name>Input signal</Name>
-				</Input>
-				<Input>
-					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
-					<Name>Input stimulations</Name>
-				</Input>
-			</Inputs>
-			<Settings>
-				<Setting>
-					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
-					<Name>Signal stream</Name>
-					<DefaultValue>openvibeSignal</DefaultValue>
-					<Value>openvibeSignal</Value>
-					<Modifiability>false</Modifiability>
-				</Setting>
-				<Setting>
-					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
-					<Name>Marker stream</Name>
-					<DefaultValue>openvibeMarkers</DefaultValue>
-					<Value>openvibeMarkers</Value>
-					<Modifiability>false</Modifiability>
-				</Setting>
-			</Settings>
-			<Attributes>
-				<Attribute>
-					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>448</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>480</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -963,6 +910,56 @@
 			</Attributes>
 		</Box>
 		<Box>
+			<Identifier>(0x0000208b, 0x00002b87)</Identifier>
+			<Name>GDF file writer</Name>
+			<AlgorithmClassIdentifier>(0x1e7b2155, 0x107289ce)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Experiment information</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
+					<Name>Signal</Name>
+				</Input>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulation</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
+					<Name>Filename</Name>
+					<DefaultValue>record-[$core{date}-$core{time}].gdf</DefaultValue>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/signals/Online/[$core{date}-$core{time}].gdf</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>464</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>656</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0xd41e3037, 0xcc12644a)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>3</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
 			<Identifier>(0x00002376, 0x00000c86)</Identifier>
 			<Name>Analog VRPN Server</Name>
 			<AlgorithmClassIdentifier>(0x0ddc3a7e, 0x6f6e6401)</AlgorithmClassIdentifier>
@@ -1259,6 +1256,59 @@
 			</Attributes>
 		</Box>
 		<Box>
+			<Identifier>(0x00003f97, 0x0000658d)</Identifier>
+			<Name>Player Controller</Name>
+			<AlgorithmClassIdentifier>(0x5f426dce, 0x08456e13)</AlgorithmClassIdentifier>
+			<Inputs>
+				<Input>
+					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
+					<Name>Stimulations</Name>
+				</Input>
+			</Inputs>
+			<Settings>
+				<Setting>
+					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
+					<Name>Stimulation name</Name>
+					<DefaultValue>OVTK_StimulationId_Label_00</DefaultValue>
+					<Value>OVTK_StimulationId_ExperimentStop</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+				<Setting>
+					<TypeIdentifier>(0xcc14d8d6, 0xf27ecb73)</TypeIdentifier>
+					<Name>Action to perform</Name>
+					<DefaultValue>Pause</DefaultValue>
+					<Value>Pause</Value>
+					<Modifiability>false</Modifiability>
+				</Setting>
+			</Settings>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
+					<Value>512</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
+					<Value>592</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
+					<Value>(0x568d148e, 0x650792b3)</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xc73e83ec, 0xf855c5bc)</Identifier>
+					<Value>false</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xce18836a, 0x9c0eb403)</Identifier>
+					<Value>2</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0xcfad85b0, 0x7c6d841c)</Identifier>
+					<Value>1</Value>
+				</Attribute>
+			</Attributes>
+		</Box>
+		<Box>
 			<Identifier>(0x000043ae, 0x00005392)</Identifier>
 			<Name>GDF file reader</Name>
 			<AlgorithmClassIdentifier>(0x3eeb1264, 0x4edfbd9a)</AlgorithmClassIdentifier>
@@ -1302,11 +1352,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>224</Value>
+					<Value>320</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>448</Value>
+					<Value>-96</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
@@ -1368,19 +1418,15 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>352</Value>
+					<Value>304</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>112</Value>
+					<Value>128</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
 					<Value></Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
-					<Value>1</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -2824,7 +2870,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Epoch 1 intervals (in sec)</Name>
 					<DefaultValue>0.5</DefaultValue>
-					<Value>0.062500</Value>
+					<Value>0.05</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -2874,7 +2920,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>${Player_ScenarioDirectory}/signals/motor-imagery-csp-4-online-[$core{date}-$core{time}].ov</Value>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/signals/Online/[$core{date}-$core{time}].ov</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -2888,15 +2934,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>400</Value>
+					<Value>448</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>-64</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
-					<Value>1</Value>
+					<Value>448</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3139,14 +3181,14 @@
 					<TypeIdentifier>(0xb0d0db45, 0x49cbc34a)</TypeIdentifier>
 					<Name>Lua Script</Name>
 					<DefaultValue></DefaultValue>
-					<Value>${Player_ScenarioDirectory}/motor-imagery-bci-graz-stimulator.lua</Value>
+					<Value>C:/Users/Audrey/Documents/GitHub/NeuRow-CueBased-VR/OV-scenarios/Hamming/motor-imagery-bci-graz-stimulator-fmri-block.lua</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
 					<Name>Number of Trials for Each Class</Name>
 					<DefaultValue>20</DefaultValue>
-					<Value>12</Value>
+					<Value>4</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3167,21 +3209,21 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Baseline Duration (in sec)</Name>
 					<DefaultValue>20</DefaultValue>
-					<Value>5</Value>
+					<Value>30</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Wait For Beep Duration (in sec)</Name>
 					<DefaultValue>2</DefaultValue>
-					<Value>2</Value>
+					<Value>0</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Wait For Cue Duration (in sec)</Name>
 					<DefaultValue>1</DefaultValue>
-					<Value>1</Value>
+					<Value>1.500</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3202,14 +3244,14 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>End of Trial Minimum Duration (in sec)</Name>
 					<DefaultValue>1.500</DefaultValue>
-					<Value>1.500</Value>
+					<Value>0</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>End of Trial Maximum Duration (in sec)</Name>
 					<DefaultValue>3.500</DefaultValue>
-					<Value>3.500</Value>
+					<Value>2.500</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -3220,15 +3262,11 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>992</Value>
+					<Value>208</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>-272</Value>
-				</Attribute>
-				<Attribute>
-					<Identifier>(0x341d3912, 0x1478de86)</Identifier>
-					<Value>1</Value>
+					<Value>480</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3305,7 +3343,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>High cut frequency (Hz)</Name>
 					<DefaultValue>40</DefaultValue>
-					<Value>30</Value>
+					<Value>45</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3319,11 +3357,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>336</Value>
+					<Value>368</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>368</Value>
+					<Value>128</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3464,17 +3502,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x000005da, 0x00000eff)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x00001988, 0x0000550d)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00004a5b, 0x00006206)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00000a11, 0x000076e8)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x0000041b, 0x00004394)</BoxIdentifier>
@@ -3486,17 +3513,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00000c43, 0x00000125)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x32a27c59, 0x7f1e980d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00000d0c, 0x00001bb9)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x5e704572, 0x05e86e99)</BoxIdentifier>
@@ -3504,6 +3520,17 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x000055d7, 0x000022f8)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00000e50, 0x00007606)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001560, 0x00006f75)</BoxIdentifier>
 				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3548,6 +3575,17 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2f9)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00001cf6, 0x00005523)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00003f97, 0x0000658d)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3618,13 +3656,24 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00002d27, 0x00004667)</Identifier>
+			<Identifier>(0x000033ac, 0x00001fb3)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00003578, 0x00006625)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x32a27c59, 0x7f1e980d)</BoxIdentifier>
 				<BoxOutputIndex>1</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
+				<BoxIdentifier>(0x00004a5b, 0x00006206)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3684,6 +3733,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00003f05, 0x00002f9f)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x0000208b, 0x00002b87)</BoxIdentifier>
+				<BoxInputIndex>2</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x00003fa1, 0x00004f90)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
@@ -3703,6 +3763,17 @@
 			<Target>
 				<BoxIdentifier>(0x5bdc6ef9, 0x5aa3869b)</BoxIdentifier>
 				<BoxInputIndex>3</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00004a06, 0x000030b9)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -3849,25 +3920,47 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00006812, 0x00007fa3)</Identifier>
+			<Identifier>(0x00006667, 0x000071b4)</Identifier>
 			<Source>
-				<BoxIdentifier>(0x32a27c59, 0x7f1e980d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x00001560, 0x00006f76)</BoxIdentifier>
+				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
 				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00006f25, 0x00006f3b)</Identifier>
+			<Identifier>(0x00006d0d, 0x000015c0)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x32a27c59, 0x7f1e980d)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
+				<BoxOutputIndex>1</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
+				<BoxIdentifier>(0x0000208b, 0x00002b87)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006ea5, 0x00004a17)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00004a5b, 0x00006206)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00007020, 0x00002048)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x5f46e728, 0x65c0dbad)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x3eea244d, 0x54616491)</BoxIdentifier>
+				<BoxInputIndex>2</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -3890,6 +3983,17 @@
 			<Target>
 				<BoxIdentifier>(0x00005cec, 0x00006f76)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00007300, 0x000039b1)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x32a27c59, 0x7f1e980d)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x3eea244d, 0x54616491)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -4010,11 +4114,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
-					<Value>544</Value>
+					<Value>656</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>304</Value>
+					<Value>288</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>
