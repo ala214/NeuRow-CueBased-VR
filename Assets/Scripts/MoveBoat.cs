@@ -111,10 +111,10 @@ public class MoveBoat : MonoBehaviour {
 				//			right = false;
 
 				// Oculus left haptic feedback
-				if(Settings.haptic){
-					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-					Debug.Log ("using training left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-				}
+				//if(Settings.haptic){
+				//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+				//	Debug.Log ("using training left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				//}
 
 				if (!Settings.reverseHands)
 					transform.Rotate (Vector3.up * turnspeed * Time.deltaTime, Space.World);
@@ -127,8 +127,8 @@ public class MoveBoat : MonoBehaviour {
 				right = true;
 
 				// Oculus right haptic feedback
-				if(Settings.haptic)
-					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+				//if(Settings.haptic)
+				//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
 
 				if (!Settings.reverseHands)
 					transform.Rotate (Vector3.down * turnspeed * Time.deltaTime, Space.World);
@@ -161,10 +161,10 @@ public class MoveBoat : MonoBehaviour {
 				//			right = false;
 
 				// Oculus left haptic feedback
-				if(Settings.haptic){
-					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-					Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-				}
+				//if(Settings.haptic){
+				//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
+				//	Debug.Log ("VIBRATE left!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				//}
 
 				if(!Settings.reverseHands)
 					transform.Rotate (Vector3.up * turnspeed * Time.deltaTime, Space.World);
@@ -179,10 +179,10 @@ public class MoveBoat : MonoBehaviour {
 				countR += 1;	// scoring - right rows
 
 				// Oculus right haptic feedback
-				if(Settings.haptic){
-					OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
-					Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-				}
+				//if(Settings.haptic){
+				//	OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
+				//	Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+				//}
 
 				if(!Settings.reverseHands)
 					transform.Rotate (Vector3.down * turnspeed * Time.deltaTime, Space.World);
@@ -208,7 +208,7 @@ public class MoveBoat : MonoBehaviour {
 
 	}
 
-
+	// training
 	void getStim()
 	{
 		int stim = Receivemarkers.markerint;
@@ -267,7 +267,7 @@ public class MoveBoat : MonoBehaviour {
 			rightarrow.SetActive(false);
 			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
 			//OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
-			cross= true;
+			cross = true;
 			hidearrow = true;
 			//left= false;
 			//right= false;
@@ -279,7 +279,7 @@ public class MoveBoat : MonoBehaviour {
 		return Assets.LSL4Unity.Scripts.Examples.ExampleFloatInlet.signal;
 	}
 
-
+	// online
 	void getStimOnline()
 	{
 		int stim = Receivemarkers.markerint;

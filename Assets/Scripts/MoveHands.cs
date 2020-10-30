@@ -2,6 +2,7 @@
 using System.Collections;
 
 // used
+// moves hands with boat
 
 public class MoveHands : MonoBehaviour {
 
@@ -33,11 +34,13 @@ public class MoveHands : MonoBehaviour {
 	void UpdatePosition()
 	{
 		if (this.gameObject.name.Contains("Left") ){// && MoveBoat.left) {
-			if(Settings.leapOn)
+			if(Settings.leapOn){
 				this.gameObject.transform.position = new Vector3(leftRow.transform.position.x, leftRow.transform.position.y-2.8f, leftRow.transform.position.z);
-			else
+			}
+			else{
 				this.gameObject.transform.position = new Vector3(leftRow.transform.position.x, leftRow.transform.position.y-2.8f, leftRow.transform.position.z);
 			//	GameObject.FindGameObjectWithTag("LeftHand").transform.position = new Vector3(GameObject.FindGameObjectWithTag("LeftTarget").transform.position.x+0f, GameObject.FindGameObjectWithTag("LeftTarget").transform.position.y-3.0f, GameObject.FindGameObjectWithTag("LeftTarget").transform.position.z-0f);
+			}
 		}
 
 		if (this.gameObject.name.Contains("Right") ){// && MoveBoat.right) {
