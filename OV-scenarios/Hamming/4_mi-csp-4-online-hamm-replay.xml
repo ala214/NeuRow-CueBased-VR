@@ -326,7 +326,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-160</Value>
+					<Value>-144</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
@@ -576,7 +576,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/OneDrive/Desktop/M-ITI/NeuRow2019/NeuAugVR2020/Scenarios-Hospital/Data/Online/C09/[2020.02.27-11.55.41]_Online.ov</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/4_online/online-S01.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -1281,7 +1281,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/4_online/online-S01.gdf</Value>
+					<Value>C:/Users/Audrey/Documents/Lisbon_data/Lisbon_data/newGame/3_neurow/ROW-S01.gdf</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -1364,11 +1364,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-224</Value>
+					<Value>-256</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>720</Value>
+					<Value>688</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
@@ -3319,11 +3319,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>-240</Value>
+					<Value>-192</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>976</Value>
+					<Value>704</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
@@ -3475,17 +3475,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00000834, 0x00001f4c)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00000a11, 0x000076e8)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x0000041b, 0x00004394)</BoxIdentifier>
@@ -3516,39 +3505,6 @@
 			<Target>
 				<BoxIdentifier>(0x000038b6, 0x00000312)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x000014fa, 0x000010b7)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x000018a8, 0x000055f1)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x00001a17, 0x00006161)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00001560, 0x00006f76)</BoxIdentifier>
-				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -3592,6 +3548,17 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2fd)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00002636, 0x00007682)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001560, 0x00006f76)</BoxIdentifier>
 				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3717,6 +3684,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x0000440b, 0x000066cd)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x000049aa, 0x00001202)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x04a03512, 0x1acdb2fd)</BoxIdentifier>
@@ -3783,6 +3761,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00005623, 0x00007453)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00000483, 0x00002eb9)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x00005824, 0x000055ae)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
@@ -3805,6 +3794,17 @@
 			</Target>
 		</Link>
 		<Link>
+			<Identifier>(0x00005c35, 0x00000f72)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>2</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00001fc7, 0x00005adb)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
 			<Identifier>(0x00005cef, 0x00006bff)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x000039c0, 0x00007be0)</BoxIdentifier>
@@ -3812,6 +3812,17 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x00001ab0, 0x0000236f)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00005da5, 0x000077c0)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x661c8098, 0x37ddbba0)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
@@ -3944,17 +3955,6 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x00001ab0, 0x0000236c)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
-			<Identifier>(0x00007e07, 0x000036c9)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000043ae, 0x00005392)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>

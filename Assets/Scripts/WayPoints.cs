@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// used
+// used but not needed
 
 public class WayPoints : MonoBehaviour
 {

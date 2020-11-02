@@ -53,7 +53,7 @@ public static Scoring Instance;
 		fireworks = GameObject.Find("Fireworks");
 		rewardtext.SetActive(false);
 		fireworks.SetActive(false);
-		rocket = GameObject.Find("Sparkles5");
+		rocket = GameObject.Find("Rocket2");
 		scoreText = GameObject.Find("ScoreText");
 		finalScoreText = GameObject.Find("FinalScore");
 
@@ -170,13 +170,13 @@ public static Scoring Instance;
 						tempScore = 1;
 	//					Debug.Log("tempScore: "+tempScore);
 					}
-					else if(rewardAvg > 0.55f && rewardAvg <= 0.85f){
+					if(rewardAvg > 0.55f && rewardAvg <= 0.85f){
 	//					Debug.Log("averageScore>=65 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+5";
 						tempScore = 5;
 	//					Debug.Log("tempScore: "+tempScore);
 					}
-					else{ // if(rewardAvg >= 85f)
+					if(rewardAvg > 0.85){ // if(rewardAvg >= 85f)
 	//					Debug.Log("averageScore>=85 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+10";
 						tempScore = 10;
@@ -199,11 +199,16 @@ public static Scoring Instance;
 						//Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
 						fireDisplay = true;
 						fireworks.SetActive(true);
+						//if (fireworks.isActive == false )
+						//	rewardtext.SetActive(false);
+
 						// move reward text to fixed cross position
 						//MoveReward.move = true;
 // BREAK
-						//if(rocket.GetComponent<ParticleSystem>().isStopped())
-						//	rewardtext.SetActive(false);
+						if(rocket.GetComponent<ParticleSystem>().isStopped){
+							rewardtext.SetActive(false);
+							Debug.Log("inside stopping particle system & hiding reward");
+						}
 					}
 				}
 

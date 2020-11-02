@@ -329,7 +329,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x8d21ff41, 0xdf6afe7e)</Identifier>
-					<Value>D:/_Thanos/git/neurow-cuebased/OV-scenarios/csp-spatial-filter.cfg</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Observation/1/csp-spatial-filter.cfg</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
@@ -445,7 +445,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename to save configuration to</Name>
 					<DefaultValue>${Path_UserData}/my-classifier.xml</DefaultValue>
-					<Value>${Player_ScenarioDirectory}/motor-imagery-bci-config-classifier.cfg</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Observation/1/classifier.cfg</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -841,7 +841,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>D:/_Thanos/git/neurow-cuebased/OV-scenarios/signals/motor-imagery-1-[2020.02.17-15.04.20].ov</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Observation/1/[2019.07.24-16.44.57].ov</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
