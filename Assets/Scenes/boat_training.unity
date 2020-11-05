@@ -12125,7 +12125,7 @@ MonoBehaviour:
   lFemaleHand: {fileID: 0}
   scaleChange: {x: 0, y: 0, z: 0}
   dir: {fileID: 806732789}
-  levelDone: {fileID: 0}
+  levelDone: {fileID: 8300000, guid: fc583d1e0eab2ca4f969a8c0cd32f6ec, type: 3}
 --- !u!4 &468851684
 Transform:
   m_ObjectHideFlags: 0
@@ -18143,8 +18143,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567346704}
-  m_LocalRotation: {x: 0.080095336, y: 0.4390795, z: 0.03934653, w: -0.89400554}
-  m_LocalPosition: {x: -2.9322016, y: -4.0538025, z: -16.171335}
+  m_LocalRotation: {x: -0.11375094, y: 0.0059793824, z: 0.00072527444, w: 0.9934911}
+  m_LocalPosition: {x: -13.813362, y: -43.433876, z: -129.8913}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

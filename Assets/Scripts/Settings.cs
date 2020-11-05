@@ -106,7 +106,7 @@ public class Settings : MonoBehaviour
 
 		getLogDirectory ();
 
-		duration = "492";
+		duration = "600";
 		Scoring.updateDuration(duration);
 
 		//MainCamera = GameObject.Find("Main Camera");
