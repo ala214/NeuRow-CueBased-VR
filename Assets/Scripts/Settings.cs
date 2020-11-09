@@ -17,6 +17,7 @@ public class Settings : MonoBehaviour
 	
 	public GameObject leap, hands, cross, leftarrow, rightarrow;
 	public GameObject rMaleHand, lMaleHand, rFemaleHand, lFemaleHand;
+	public GameObject arrowLFr, arrowRFr, arrowLFb, arrowRFb, arrowBg, arrowBw;
 
 	//public GameObject rewardtext;
 	
@@ -52,6 +53,8 @@ public class Settings : MonoBehaviour
 	public static bool points;
 	public static bool percentage;
 	public static bool flash = true;
+	public static bool blackwhite = true;
+	public static bool redgray;
 	//public static bool flash = false;	// change to true for default SSVEP
 //------------------------------------------
 
@@ -93,8 +96,14 @@ public class Settings : MonoBehaviour
 		lFemaleHand = GameObject.Find("LeftHandFemale");
 		Settings.Instance.rFemaleHand.SetActive(false);
 		Settings.Instance.lFemaleHand.SetActive(false);
-//		Settings.Instance.rewardtext = GameObject.Find("RewardText");
-//		fireworks = GameObject.Find("Fireworks");
+		
+		arrowLFr = GameObject.Find("arrowLFr");
+		arrowRFr = GameObject.Find("arrowRFr");
+		arrowLFb = GameObject.Find("arrowLFb");
+		arrowRFb = GameObject.Find("arrowRFb");
+		arrowBg = GameObject.Find("arrowBg");
+		arrowBw = GameObject.Find("arrowBw");
+
 
 		scoregui.SetActive (false);
 		traininggui.SetActive (false);
@@ -391,6 +400,18 @@ public class Settings : MonoBehaviour
 		case "BackgroundFlash":
 			//print(name+": "+value);
 			flash = value;
+			break;
+		case "BackgroundB/W":
+			blackwhite = value;
+			Settings.Instance.arrowLFr.SetActive(false); 
+			Settings.Instance.arrowRFr.SetActive(false);
+			Settings.Instance.arrowBg.SetActive(false);
+			break;
+		case "BackgroundR/G":
+			redgray = value;
+			Settings.Instance.arrowLFb.SetActive(false);
+			Settings.Instance.arrowRFb.SetActive(false); 
+			Settings.Instance.arrowBw.SetActive(false);
 			break;
 		case "BackgroundPoints": // reward points
 			//print(name+": "+value);
