@@ -170,13 +170,14 @@ public static Scoring Instance;
 						tempScore = 1;
 	//					Debug.Log("tempScore: "+tempScore);
 					}
-					if(rewardAvg > 0.55f && rewardAvg <= 0.85f){
+					else if(rewardAvg > 0.55f && rewardAvg <= 0.85f){
 	//					Debug.Log("averageScore>=65 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+5";
 						tempScore = 5;
 	//					Debug.Log("tempScore: "+tempScore);
 					}
-					if(rewardAvg > 0.85){ // if(rewardAvg >= 85f)
+					// if(rewardAvg > 0.85){
+					else { // if(rewardAvg >= 85f)
 	//					Debug.Log("averageScore>=85 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+10";
 						tempScore = 10;

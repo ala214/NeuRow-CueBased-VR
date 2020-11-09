@@ -114,7 +114,7 @@
 					<TypeIdentifier>(0x007deef9, 0x2f3e95c6)</TypeIdentifier>
 					<Name>Timeout delay</Name>
 					<DefaultValue>5</DefaultValue>
-					<Value>390</Value>
+					<Value>450</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -376,7 +376,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Spatial filter configuration</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/1/csp-spatial-filter.cfg</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/6/csp-spatial-filter.cfg</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -397,7 +397,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>144</Value>
+					<Value>176</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
@@ -514,7 +514,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/1/[2019.07.24-16.31.00].ov</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/6/[2019.07.22-14.26.50] - Copy.ov</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -619,17 +619,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00001c6b, 0x00005eaa)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x000027da, 0x00005cde)</BoxIdentifier>
-				<BoxOutputIndex>1</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x00004125, 0x0000536f)</BoxIdentifier>
-				<BoxInputIndex>0</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x00001cf8, 0x00000120)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x000055dc, 0x0000109e)</BoxIdentifier>
@@ -703,6 +692,17 @@
 			</Source>
 			<Target>
 				<BoxIdentifier>(0x00002266, 0x00006547)</BoxIdentifier>
+				<BoxInputIndex>0</BoxInputIndex>
+			</Target>
+		</Link>
+		<Link>
+			<Identifier>(0x00006f0c, 0x00001aee)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x000027da, 0x00005cde)</BoxIdentifier>
+				<BoxOutputIndex>1</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x00004125, 0x0000536f)</BoxIdentifier>
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>

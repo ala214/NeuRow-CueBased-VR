@@ -123,11 +123,16 @@
 			<Outputs>
 				<Output>
 					<TypeIdentifier>(0x5ba36127, 0x195feae1)</TypeIdentifier>
-					<Name>Output Signal</Name>
+					<Name>Output stream 1</Name>
 				</Output>
 				<Output>
 					<TypeIdentifier>(0x6f752dd0, 0x082a321e)</TypeIdentifier>
-					<Name>Output Stimulations</Name>
+					<Name>Output stream 2</Name>
+				</Output>
+				<Output>
+					<Identifier>(0x002f4e89, 0x9a3976f1)</Identifier>
+					<TypeIdentifier>(0x403488e7, 0x565d70b6)</TypeIdentifier>
+					<Name>Output stream 3</Name>
 				</Output>
 			</Outputs>
 			<Settings>
@@ -135,7 +140,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/1/[2019.07.24-16.31.00].ov</Value>
+					<Value>C:/Users/Audrey/OneDrive - Mississippi State University/Desktop/M-ITI/NeuRow2019/MotorImageryBCIexp/Baseline_condition/Healthy_young/Motor_imagery/6/[2019.07.22-14.26.50].ov</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -195,7 +200,22 @@
 			</Target>
 		</Link>
 	</Links>
-	<Comments></Comments>
+	<Comments>
+		<Comment>
+			<Identifier>(0x000028b4, 0x000018e2)</Identifier>
+			<Text>7min 41s</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>768</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>256</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+	</Comments>
 	<Metadata>
 		<Entry>
 			<Identifier>(0x00007dd0, 0x00005b50)</Identifier>
