@@ -10267,7 +10267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &69074048
 Transform:
   m_ObjectHideFlags: 0
@@ -16577,7 +16577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &165273414
 Transform:
   m_ObjectHideFlags: 0
@@ -31438,7 +31438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567346704}
   m_LocalRotation: {x: -0.11375094, y: 0.0059793824, z: 0.00072527444, w: 0.9934911}
-  m_LocalPosition: {x: 519.0907, y: -622.1198, z: -1256.0847}
+  m_LocalPosition: {x: 581.41785, y: -634.3559, z: -1254.243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -42026,7 +42026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1029725519
 Transform:
   m_ObjectHideFlags: 0
@@ -77578,6 +77578,12 @@ MonoBehaviour:
   lMaleHand: {fileID: 0}
   rFemaleHand: {fileID: 0}
   lFemaleHand: {fileID: 0}
+  arrowLFr: {fileID: 0}
+  arrowRFr: {fileID: 0}
+  arrowLFb: {fileID: 0}
+  arrowRFb: {fileID: 0}
+  arrowBg: {fileID: 0}
+  arrowBw: {fileID: 0}
   scaleChange: {x: 0, y: 0, z: 0}
   dir: {fileID: 1942626907}
   levelDone: {fileID: 8300000, guid: fc583d1e0eab2ca4f969a8c0cd32f6ec, type: 3}
@@ -80477,7 +80483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1750735182
 Transform:
   m_ObjectHideFlags: 0

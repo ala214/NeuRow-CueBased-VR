@@ -20,6 +20,7 @@ public class FlashArrow : MonoBehaviour {
 		if (Settings.blackwhite) {
 			arrowL = GameObject.Find ("arrowLFb");
 			arrowR = GameObject.Find ("arrowRFb");
+			Debug.Log("black");
 		} else {
 			arrowL = GameObject.Find ("arrowLFr");
 			arrowR = GameObject.Find ("arrowRFr");
