@@ -26164,7 +26164,7 @@ GameObject:
   - component: {fileID: 521236437}
   - component: {fileID: 521236438}
   m_Layer: 0
-  m_Name: arrowBw
+  m_Name: arrowBb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26221,7 +26221,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 88380b52493ecce42bd2db62d6e9ad7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70d2b445df352b8409857039bf8d343e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -31437,8 +31437,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 567346704}
-  m_LocalRotation: {x: -0.11375094, y: 0.0059793824, z: 0.00072527444, w: 0.9934911}
-  m_LocalPosition: {x: 581.41785, y: -634.3559, z: -1254.243}
+  m_LocalRotation: {x: 0.06166552, y: 0.14374907, z: 0.008983095, w: -0.9876502}
+  m_LocalPosition: {x: 676.3063, y: -354.1415, z: -537.3596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37071,7 +37071,7 @@ GameObject:
   - component: {fileID: 628626714}
   - component: {fileID: 628626715}
   m_Layer: 0
-  m_Name: arrowRFb
+  m_Name: arrowRFw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37128,7 +37128,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70d2b445df352b8409857039bf8d343e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88380b52493ecce42bd2db62d6e9ad7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -41880,7 +41880,7 @@ GameObject:
   - component: {fileID: 1010448080}
   - component: {fileID: 1010448081}
   m_Layer: 0
-  m_Name: arrowBw
+  m_Name: arrowBb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41937,7 +41937,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 88380b52493ecce42bd2db62d6e9ad7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 70d2b445df352b8409857039bf8d343e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -42418,7 +42418,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1054776548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57363,7 +57363,7 @@ GameObject:
   - component: {fileID: 1403658964}
   - component: {fileID: 1403658965}
   m_Layer: 0
-  m_Name: arrowLFb
+  m_Name: arrowLFw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57420,7 +57420,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70d2b445df352b8409857039bf8d343e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88380b52493ecce42bd2db62d6e9ad7a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82437,7 +82437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1881613210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -89554,7 +89554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2037363822
 RectTransform:
   m_ObjectHideFlags: 0
@@ -99847,7 +99847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2121868999
 RectTransform:
   m_ObjectHideFlags: 0
