@@ -401,18 +401,18 @@ public class Settings : MonoBehaviour
 			//print(name+": "+value);
 			flash = value;
 			break;
-		case "BackgroundB/W":
-			blackwhite = value;
-			Settings.Instance.arrowLFr.SetActive(false); 
-			Settings.Instance.arrowRFr.SetActive(false);
-			Settings.Instance.arrowBg.SetActive(false);
-			break;
-		case "BackgroundR/G":
-			redgray = value;
-			Settings.Instance.arrowLFb.SetActive(false);
-			Settings.Instance.arrowRFb.SetActive(false); 
-			Settings.Instance.arrowBw.SetActive(false);
-			break;
+		//case "BackgroundB/W":
+		//	blackwhite = value;
+		//	Settings.Instance.arrowLFr.SetActive(false); 
+		//	Settings.Instance.arrowRFr.SetActive(false);
+		//	Settings.Instance.arrowBg.SetActive(false);
+		//	break;
+		//case "BackgroundR/G":
+		//	redgray = value;
+		//	Settings.Instance.arrowLFb.SetActive(false);
+		//	Settings.Instance.arrowRFb.SetActive(false); 
+		//	Settings.Instance.arrowBw.SetActive(false);
+		//	break;
 		case "BackgroundPoints": // reward points
 			//print(name+": "+value);
 			points = value;

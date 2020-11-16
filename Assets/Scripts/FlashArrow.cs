@@ -11,26 +11,41 @@ public class FlashArrow : MonoBehaviour {
 	public static float cycleDuration;
 	public GameObject arrowL, arrowR;
 
+	private float updateCount = 0;
+    private float fixedUpdateCount = 0;
+    private float updateUpdateCountPerSecond;
+    private float updateFixedUpdateCountPerSecond;
 
 
 	
 	void Start () {	
 		//arrowL = GameObject.Find("LeftArrowVR");
 		//arrowR = GameObject.Find("RightArrowVR");
-		if (Settings.blackwhite) {
-			arrowL = GameObject.Find ("arrowLFb");
-			arrowR = GameObject.Find ("arrowRFb");
-			Debug.Log("black");
-		} else {
-			arrowL = GameObject.Find ("arrowLFr");
-			arrowR = GameObject.Find ("arrowRFr");
-		}
+		//if (Settings.blackwhite) {
+		//	arrowL = GameObject.Find ("arrowLFb");
+		//	arrowR = GameObject.Find ("arrowRFb");
+		//	Debug.Log("black");
+		//} else {
+		//	arrowL = GameObject.Find ("arrowLFr");
+		//	arrowR = GameObject.Find ("arrowRFr");
+		//}
 
 		//Debug.Log("Flash Arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
+		// Uncommenting this will cause framerate to drop to 10 frames per second.
+        // This will mean that FixedUpdate is called more often than Update.
+        //Application.targetFrameRate = 10;
+        StartCoroutine(Loop());
 	}
 	
+	// Increase the number of calls to Update.
+    void FixedUpdate()
+    {
+        fixedUpdateCount += 1;
+    }
 	
 	void Update () {	
+		updateCount += 1;
 
 		//StopAllCoroutines();
 		//Debug.Log("stopping all coroutines----------");
@@ -38,14 +53,17 @@ public class FlashArrow : MonoBehaviour {
 			if (MoveBoat.left) {
 				// make arrow flash 30 Hz
 				//Debug.Log ("inside FlashArrow - move boat left");
-				StartCoroutine (blinkLeft (30.0f));
+
+				//StartCoroutine (blinkLeft (30.0f));
+				StartCoroutine (blinkLeft (12.0f));
 				//Debug.Log("blink call counter total: "+fps_countL);
 			}
 
 			if (MoveBoat.right) {
 				// make arrow flash 40 Hz
 				//Debug.Log ("inside FlashArrow - move boat right");
-				StartCoroutine (blinkRight (40.0f));			
+				//StartCoroutine (blinkRight (40.0f));
+				StartCoroutine (blinkRight (18.0f)); 		
 			}
 		}
 	}
@@ -54,7 +72,7 @@ public class FlashArrow : MonoBehaviour {
 		cycleDuration = 1.0f / frequency;
 		//Debug.Log("flashing left");
 //		while(MoveBoat.left)
-		for(int i=0; i<30; i++)
+		for(int i=0; i<12; i++)
 		{
 			yield return new WaitForSeconds(cycleDuration);
 			arrowL.SetActive(false);
@@ -74,7 +92,7 @@ public class FlashArrow : MonoBehaviour {
 	IEnumerator blinkRight(float frequency) {
 		cycleDuration = 1.0f / frequency;
 		//Debug.Log("flashing right");
-		for(int j=0; j<40; j++)
+		for(int j=0; j<18; j++)
 		{
 			yield return new WaitForSeconds(cycleDuration);
 			arrowR.SetActive(false);
@@ -89,6 +107,33 @@ public class FlashArrow : MonoBehaviour {
 //		Debug.Log("Right Counter: "+fps_countR);
 	}
 
+	// Show the number of calls to both messages.
+    //void OnGUI()
+    //{
+    //    GUIStyle fontSize = new GUIStyle(GUI.skin.GetStyle("label"));
+    //    fontSize.fontSize = 24;
+    //    GUI.Label(new Rect(100, 100, 200, 50), "Update: " + updateUpdateCountPerSecond.ToString(), fontSize);
+    //    GUI.Label(new Rect(100, 150, 200, 50), "FixedUpdate: " + updateFixedUpdateCountPerSecond.ToString(), fontSize);
+   	//	  Debug.Log("updateUpdateCountPerSecond: " +updateUpdateCountPerSecond);
+    //    Debug.Log("updateFixedUpdateCountPerSecond: " +updateFixedUpdateCountPerSecond);
+    //    Debug.Log("screen current resolution: " +Screen.currentResolution.refreshRate);
+        // Update is at 60 fps
+        // FixedUpdate is at 50 fps
+    //}
 
+    // Update both CountsPerSecond values every second.
+    IEnumerator Loop()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            updateUpdateCountPerSecond = updateCount;
+            updateFixedUpdateCountPerSecond = fixedUpdateCount;
+
+
+            updateCount = 0;
+            fixedUpdateCount = 0;
+        }
+    }
 
 }

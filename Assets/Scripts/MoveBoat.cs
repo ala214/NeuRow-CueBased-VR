@@ -88,16 +88,18 @@ public class MoveBoat : MonoBehaviour {
 		//if((compass.localEulerAngles.y >= (360 - stoppingAngle) && compass.localEulerAngles.y <= 360) || (compass.localEulerAngles.y >= 0 && compass.localEulerAngles.y <= (0 + stoppingAngle)))
 		//	transform.Translate(Vector3.forward * boatspeed * Time.deltaTime);
 
-		if (Receivemarkers.markerint == 1010) //32770 experiment stop
-			EndofSessionPanel.SetActive(true); //pop window
+		// not sure what 1010 is
+		//if (Receivemarkers.markerint == 1010) 
+			//EndofSessionPanel.SetActive(true); //pop window
 			//Debug.Log ("End of Session!");
 
 
 		//Todo
 		// on 32770 experiment stop
 		// quit app
-		if (Receivemarkers.markerint == 32770) //32770
+		if (Receivemarkers.markerint == 32770) //32770 experiment stop
 			Debug.Log ("32770 experiment stop");
+			EndofSessionPanel.SetActive(true); //pop window
 		
 
 
