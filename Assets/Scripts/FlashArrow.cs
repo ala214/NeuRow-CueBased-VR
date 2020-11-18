@@ -26,8 +26,8 @@ public class FlashArrow : MonoBehaviour {
 		//	arrowR = GameObject.Find ("arrowRFb");
 		//	Debug.Log("black");
 		//} else {
-		//	arrowL = GameObject.Find ("arrowLFr");
-		//	arrowR = GameObject.Find ("arrowRFr");
+		arrowL = GameObject.Find ("arrowLFr");
+		arrowR = GameObject.Find ("arrowRFr");
 		//}
 
 		//Debug.Log("Flash Arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");

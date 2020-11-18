@@ -42,7 +42,7 @@ public class RotateRow : MonoBehaviour {
 				// Oculus left haptic feedback
 				if(Settings.haptic){
 					//OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.LTouch);
-					StartCoroutine(Haptics (1, 1, 2.5f, false, true));
+					StartCoroutine(Haptics (1, 1, 4.0f, false, true));
 					Debug.Log ("VIBRATE left training!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				}
 			}
@@ -57,7 +57,7 @@ public class RotateRow : MonoBehaviour {
 				// Oculus right haptic feedback
 				if(Settings.haptic){
 					//OVRInput.SetControllerVibration(1, 1, OVRInput.Controller.RTouch);
-					StartCoroutine(Haptics (1, 1, 2.5f, true, false));
+					StartCoroutine(Haptics (1, 1, 4.0f, true, false));
 					Debug.Log ("VIBRATE right!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 				}
 			}
