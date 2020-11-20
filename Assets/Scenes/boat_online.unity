@@ -39463,7 +39463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Points:'
+  m_Text: 'Pontos:'
 --- !u!222 &819822344
 CanvasRenderer:
   m_ObjectHideFlags: 0
