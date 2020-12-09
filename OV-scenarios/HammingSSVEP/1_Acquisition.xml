@@ -49,7 +49,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Baseline Duration (in sec)</Name>
 					<DefaultValue>20</DefaultValue>
-					<Value>20</Value>
+					<Value>30</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -342,7 +342,7 @@
 					<TypeIdentifier>(0x2c132d6e, 0x44ab0d97)</TypeIdentifier>
 					<Name>Stimulation name</Name>
 					<DefaultValue>OVTK_StimulationId_Label_00</DefaultValue>
-					<Value>OVTK_StimulationId_Label_00</Value>
+					<Value>OVTK_StimulationId_ExperimentStop</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -764,17 +764,6 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x000012ec, 0x00006d3e)</Identifier>
-			<Source>
-				<BoxIdentifier>(0x0000430f, 0x00004aa4)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
-			</Source>
-			<Target>
-				<BoxIdentifier>(0x000013d3, 0x000029d9)</BoxIdentifier>
-				<BoxInputIndex>2</BoxInputIndex>
-			</Target>
-		</Link>
-		<Link>
 			<Identifier>(0x000017d1, 0x000042cf)</Identifier>
 			<Source>
 				<BoxIdentifier>(0x0000430f, 0x00004aa4)</BoxIdentifier>
@@ -819,14 +808,14 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x000032ed, 0x00007004)</Identifier>
+			<Identifier>(0x000027c3, 0x00002313)</Identifier>
 			<Source>
-				<BoxIdentifier>(0x0000430f, 0x00004aa4)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
+				<BoxIdentifier>(0x00000de5, 0x00006f3d)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
-				<BoxInputIndex>1</BoxInputIndex>
+				<BoxIdentifier>(0x0000322a, 0x000064c3)</BoxIdentifier>
+				<BoxInputIndex>2</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -863,14 +852,14 @@
 			</Target>
 		</Link>
 		<Link>
-			<Identifier>(0x00005df3, 0x0000751f)</Identifier>
+			<Identifier>(0x00005916, 0x00006bb0)</Identifier>
 			<Source>
-				<BoxIdentifier>(0x0000430f, 0x00004aa4)</BoxIdentifier>
-				<BoxOutputIndex>2</BoxOutputIndex>
+				<BoxIdentifier>(0x00000de5, 0x00006f3d)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
 			</Source>
 			<Target>
-				<BoxIdentifier>(0x0000322a, 0x000064c3)</BoxIdentifier>
-				<BoxInputIndex>2</BoxInputIndex>
+				<BoxIdentifier>(0x00006ecc, 0x00000546)</BoxIdentifier>
+				<BoxInputIndex>1</BoxInputIndex>
 			</Target>
 		</Link>
 		<Link>
@@ -906,6 +895,17 @@
 				<BoxInputIndex>0</BoxInputIndex>
 			</Target>
 		</Link>
+		<Link>
+			<Identifier>(0x00007702, 0x000039ec)</Identifier>
+			<Source>
+				<BoxIdentifier>(0x00000de5, 0x00006f3d)</BoxIdentifier>
+				<BoxOutputIndex>0</BoxOutputIndex>
+			</Source>
+			<Target>
+				<BoxIdentifier>(0x000013d3, 0x000029d9)</BoxIdentifier>
+				<BoxInputIndex>2</BoxInputIndex>
+			</Target>
+		</Link>
 	</Links>
 	<Comments>
 		<Comment>
@@ -937,6 +937,21 @@ monitor the signals during an experiment</Text>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
 					<Value>32</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+		<Comment>
+			<Identifier>(0x00003459, 0x0000263f)</Identifier>
+			<Text>Make sure to stop scenario at 8 min 50 seconds
+(4 arrows per 1 block &amp; 5 blocks = 20 trials each side)</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>240</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>-64</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>

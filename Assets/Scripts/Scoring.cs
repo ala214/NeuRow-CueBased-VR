@@ -164,7 +164,7 @@ public static Scoring Instance;
 					}
 
 					// REWARDS
-					if(rewardAvg > 0.0f && rewardAvg <= 0.55f){
+					if(rewardAvg >= 0.0f && rewardAvg <= 0.55f){
 	//					Debug.Log("averageScore<65 "+rewardAvg);
 						rewardtext.GetComponent<Text>().text = "+1";
 						tempScore = 1;
