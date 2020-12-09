@@ -64,6 +64,7 @@ public class UDPReceive : MonoBehaviour {
 	
     void Start()
     {
+    	Debug.Log("inside UDP Receive");
 		sem1 = new Semaphore (1, 1);
 
 		windowRect0 = new Rect(Screen.width - 220, Screen.height / 2-100, 200, 150);//posx, posy, width, height

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-// used
+// not used
 
 public class MenuTabs : MonoBehaviour
 {
