@@ -12,12 +12,12 @@ public class Settings : MonoBehaviour
 	public GameObject scoregui;
 	public GameObject traininggui;
 	public GameObject waypoint; 
-	public GameObject arrow;
+	//public GameObject arrow;
 //	public GameObject fireworks;
 	
 	public GameObject leap, hands, cross, leftarrow, rightarrow;
 	public GameObject rMaleHand, lMaleHand, rFemaleHand, lFemaleHand;
-	public GameObject arrowLFr, arrowRFr, arrowLFb, arrowRFb, arrowBg, arrowBw;
+	public GameObject arrowLR, arrowRR, arrowLB, arrowRB, arrowLG, arrowRG, arrowLW, arrowRW;
 
 	//public GameObject rewardtext;
 	
@@ -53,9 +53,15 @@ public class Settings : MonoBehaviour
 	public static bool points;
 	public static bool percentage;
 	public static bool flash = true;
-	public static bool blackwhite = true;
-	public static bool redgray;
 	//public static bool flash = false;	// change to true for default SSVEP
+
+// bools for arrow colors 
+// don't need bools for each back arrow b/c they don't flash
+	public static bool red = true;
+	public static bool white;
+	public static bool black;
+	public static bool gray;
+	public static bool backColor;
 //------------------------------------------
 
 //Network Settings -------------------------
@@ -96,13 +102,6 @@ public class Settings : MonoBehaviour
 		lFemaleHand = GameObject.Find("LeftHandFemale");
 		Settings.Instance.rFemaleHand.SetActive(false);
 		Settings.Instance.lFemaleHand.SetActive(false);
-		
-		arrowLFr = GameObject.Find("arrowLFr");
-		arrowRFr = GameObject.Find("arrowRFr");
-		arrowLFb = GameObject.Find("arrowLFb");
-		arrowRFb = GameObject.Find("arrowRFb");
-		arrowBg = GameObject.Find("arrowBg");
-		arrowBw = GameObject.Find("arrowBw");
 
 
 		scoregui.SetActive (false);
@@ -115,7 +114,8 @@ public class Settings : MonoBehaviour
 
 		getLogDirectory ();
 
-		duration = "600";
+		// make it match duration of OV files
+		duration = "330";
 		Scoring.updateDuration(duration);
 
 		//MainCamera = GameObject.Find("Main Camera");
@@ -258,14 +258,14 @@ public class Settings : MonoBehaviour
 			if (isTraining) {
 				//			gui.SetActive (false);
 				waypoint.SetActive (false);
-				arrow.SetActive (false);
+				//arrow.SetActive (false);
 				Debug.Log("isTraining");
 			}
 			
 			if (!isTraining) {
 				//			gui.SetActive (true);
 				waypoint.SetActive (true);
-				arrow.SetActive (true);
+				//arrow.SetActive (true);
 				Debug.Log("!isTraining");
 			}
 			
@@ -273,7 +273,7 @@ public class Settings : MonoBehaviour
 			if (leapOn) {
 				leap.SetActive (true);
 				waypoint.SetActive (true);
-				arrow.SetActive (true);
+				//arrow.SetActive (true);
 				//	hands.SetActive (false);
 			}
 			if (!leapOn) {
@@ -401,18 +401,87 @@ public class Settings : MonoBehaviour
 			//print(name+": "+value);
 			flash = value;
 			break;
-		//case "BackgroundB/W":
-		//	blackwhite = value;
-		//	Settings.Instance.arrowLFr.SetActive(false); 
-		//	Settings.Instance.arrowRFr.SetActive(false);
-		//	Settings.Instance.arrowBg.SetActive(false);
-		//	break;
-		//case "BackgroundR/G":
-		//	redgray = value;
-		//	Settings.Instance.arrowLFb.SetActive(false);
-		//	Settings.Instance.arrowRFb.SetActive(false); 
-		//	Settings.Instance.arrowBw.SetActive(false);
-		//	break;
+	// Front Arrow
+		case "BackgroundFRed":
+			red = value;
+			Settings.Instance.arrowLR.SetActive(true); 
+			Settings.Instance.arrowRR.SetActive(true);
+			//FlashArrow.cueColor();
+			break;
+		case "BackgroundFWhite":
+			white = value;
+			red = false;
+			Settings.Instance.arrowLR.SetActive(false); 
+			Settings.Instance.arrowRR.SetActive(false);
+			Settings.Instance.arrowLW.SetActive(true); 
+			Settings.Instance.arrowRW.SetActive(true);
+			//FlashArrow.cueColor();
+			Settings.Instance.arrowLW.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowRW.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowLR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			Settings.Instance.arrowRR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			break;
+		case "BackgroundFBlack":
+			black = value;
+			red = false;
+			Settings.Instance.arrowLR.SetActive(false); 
+			Settings.Instance.arrowRR.SetActive(false);
+			Settings.Instance.arrowLB.SetActive(true); 
+			Settings.Instance.arrowRB.SetActive(true);
+			//FlashArrow.cueColor();
+			Settings.Instance.arrowLB.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowRB.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowLR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			Settings.Instance.arrowRR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			break;
+		case "BackgroundFGray":
+			gray = value;
+			red = false;
+			Settings.Instance.arrowLR.SetActive(false); 
+			Settings.Instance.arrowRR.SetActive(false);
+			Settings.Instance.arrowLG.SetActive(true); 
+			Settings.Instance.arrowRG.SetActive(true);
+			//FlashArrow.cueColor();
+			Settings.Instance.arrowLG.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowRG.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.79f);
+			Settings.Instance.arrowLR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			Settings.Instance.arrowRR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.81f);
+			break;
+	// Back Arrow
+		case "BackgroundBRed":
+			backColor = value;
+			Settings.Instance.arrowLW.SetActive(false); 
+			Settings.Instance.arrowRW.SetActive(false);
+			Settings.Instance.arrowLR.SetActive(true); 
+			Settings.Instance.arrowRR.SetActive(true);
+			Settings.Instance.arrowLR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			Settings.Instance.arrowRR.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			break;
+		case "BackgroundBWhite":
+			backColor = value;
+			Settings.Instance.arrowLW.SetActive(true); 
+			Settings.Instance.arrowRW.SetActive(true);
+			Settings.Instance.arrowLW.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			Settings.Instance.arrowRW.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			break;
+		case "BackgroundBBlack":
+			backColor = value;
+			Settings.Instance.arrowLW.SetActive(false); 
+			Settings.Instance.arrowRW.SetActive(false);
+			Settings.Instance.arrowLB.SetActive(true); 
+			Settings.Instance.arrowRB.SetActive(true);
+			Settings.Instance.arrowLB.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			Settings.Instance.arrowRB.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			break;
+		case "BackgroundBGray":
+			backColor = value;
+			Settings.Instance.arrowLW.SetActive(false); 
+			Settings.Instance.arrowRW.SetActive(false);
+			Settings.Instance.arrowLG.SetActive(true); 
+			Settings.Instance.arrowRG.SetActive(true);
+			Settings.Instance.arrowLG.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			Settings.Instance.arrowRG.transform.localPosition = new Vector3(-2.76f, -1.0f, 7.8f);
+			break;
 		case "BackgroundPoints": // reward points
 			//print(name+": "+value);
 			points = value;

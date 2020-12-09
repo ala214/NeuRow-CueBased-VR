@@ -62,7 +62,7 @@ public class WayPoints : MonoBehaviour
 			//Scoring.Add();
 			NewPosition();
 			//newPositionFixed();
-			GetComponent<AudioSource>().Play(); 
+			//GetComponent<AudioSource>().Play(); 
 		}
 	}
 

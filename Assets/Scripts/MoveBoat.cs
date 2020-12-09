@@ -45,14 +45,9 @@ public class MoveBoat : MonoBehaviour {
 		leftarrow.SetActive(false);
 		rightarrow.SetActive(false);
 
-		// HAS TO BE COMMENTED OUT FOR TRAINING ....-------------------------------------------
-//		RewardText = GameObject.Find("RewardText");
-//		RewardText.SetActive(false);
-		// ------------------------------------------------------------------------------------
-
-
 		
-		Debug.Log ("about to call scenemanager!!!!!!!!!!!!!!!!!!");
+		//Debug.Log ("about to call scenemanager!!!!!!!!!!!!!!!!!!");
+		
 		// check scene name to enable training
 		if (SceneManager.GetActiveScene().name == "boat_online") {
 			Debug.Log ("boat is online!!!!!!!!!!!!!!!!!!");
@@ -298,6 +293,7 @@ public class MoveBoat : MonoBehaviour {
 			hidearrow = false;
 			case800 = true;
 			case786 = false;
+			Debug.Log("inside case 800: hide cross +++++++++++++");
 			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.RTouch);
 			OVRInput.SetControllerVibration(0, 0, OVRInput.Controller.LTouch);
 			break;
@@ -311,6 +307,7 @@ public class MoveBoat : MonoBehaviour {
 			hidearrow = false;
 			case800 = false;
 			case786 = true;
+			Debug.Log("inside case 786: show cross +++++++++++++++++++++++++++++");
 			break;
 		case 770: // right arrow
 			crossui.SetActive(true);

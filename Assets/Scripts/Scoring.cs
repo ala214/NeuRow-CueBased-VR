@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -39,7 +39,7 @@ public class Scoring : MonoBehaviour
 	public GameObject rocket;
 	public static bool fireDisplay = false;
 	public static bool once = false;
-	public Transform defTextPos;
+	//public Transform defTextPos;
 
 
 // count = countR + countL;
@@ -106,18 +106,9 @@ public static Scoring Instance;
 //			Debug.Log("countR "+MoveBoat.countR);
 //			Debug.Log("countL "+MoveBoat.countL);
 //			Debug.Log("countW "+MoveBoat.countW);
-
-			//if(count > 0){
-	//			Debug.Log("inside count>0");
-//				curr_score = ""+waypoints;
-				curr_score = ""+fScore;
-//				score.text = curr_score;
-//				finalscore.text = ""+fScore;
-				scoreText.GetComponent<Text>().text = ""+fScore;
-//				Debug.Log("count: "+count);
-//				avgScore = (float)count / (count + MoveBoat.countW);
-//				Debug.Log("averageScore "+avgScore);
-			//}
+			Debug.Log("count: "+count);
+			curr_score = ""+fScore;
+			scoreText.GetComponent<Text>().text = ""+fScore;
 
 			//---- how to know if b/w blocks vs. b/w cues in block?------------------
 			if(!MoveBoat.training){ //show reward
@@ -133,12 +124,13 @@ public static Scoring Instance;
 
 				// only show points
 				if(MoveBoat.cross && count > 0f){ 
+					Debug.Log("inside show only points---------------f ");
 					temp += 1;	// counting #x cross disappears
 //					avgScore = (float)count / (count + MoveBoat.countW);
 				}
 // CROSS COUNT
 				if(temp > 0 && MoveBoat.case800){
-					//Debug.Log("entering cross count");
+					Debug.Log("entering cross count-=-=-=-=-=-=-=-=-=--=-=-=-=-=--");
 					temp = 0;
 					crossCount += 1;	// counting # cues for block
 					avgScore = (float)count / (count + MoveBoat.countW);
@@ -151,7 +143,7 @@ public static Scoring Instance;
 				}
 
 				if(crossCount >= 1 && MoveBoat.case800){
-					//Debug.Log("inside reward scoring");
+					Debug.Log("inside reward scoring +++++++++++++++++++++++++");
 //					Debug.Log("average score: "+avgScore);
 // INSIDE REWARD
 					if(crossCount == 4){
@@ -185,9 +177,10 @@ public static Scoring Instance;
 					} 
 				//}
 // SHOW REWARD		
-					//Debug.Log("show before reward---------------------------------");
+					Debug.Log("show before reward---------------------------------");
 					rewardtext.SetActive(true);
-					//Debug.Log("show reward---------------------------------");
+					Debug.Log("show reward---------------------------------");
+
 					if(once == true){
 						fScore += tempScore;
 						once = false;
@@ -206,10 +199,10 @@ public static Scoring Instance;
 						// move reward text to fixed cross position
 						//MoveReward.move = true;
 // BREAK
-						if(rocket.GetComponent<ParticleSystem>().isStopped){
-							rewardtext.SetActive(false);
-							Debug.Log("inside stopping particle system & hiding reward");
-						}
+						//if(rocket.GetComponent<ParticleSystem>().isStopped){
+						//	rewardtext.SetActive(false);
+						//	Debug.Log("inside stopping particle system & hiding reward");
+						//}
 					}
 				}
 

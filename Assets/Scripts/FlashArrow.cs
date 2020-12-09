@@ -15,34 +15,57 @@ public class FlashArrow : MonoBehaviour {
     private float fixedUpdateCount = 0;
     private float updateUpdateCountPerSecond;
     private float updateFixedUpdateCountPerSecond;
+    
 
-
+// object reference required to access non-static member "FlashArrow.arrowL"
+	public static FlashArrow Instance;
+	void Awake(){
+		Instance = this;
+	}
 	
 	void Start () {	
 		//arrowL = GameObject.Find("LeftArrowVR");
 		//arrowR = GameObject.Find("RightArrowVR");
-		//if (Settings.blackwhite) {
-		//	arrowL = GameObject.Find ("arrowLFb");
-		//	arrowR = GameObject.Find ("arrowRFb");
-		//	Debug.Log("black");
-		//} else {
-		arrowL = GameObject.Find ("arrowLFr");
-		arrowR = GameObject.Find ("arrowRFr");
-		//}
+
+		cueColor();
 
 		//Debug.Log("Flash Arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
-		// Uncommenting this will cause framerate to drop to 10 frames per second.
+		// Uncommenting this will cause framerate to drop to *10* frames per second.
         // This will mean that FixedUpdate is called more often than Update.
-        //Application.targetFrameRate = 10;
+        Application.targetFrameRate = 60;
         StartCoroutine(Loop());
 	}
 	
+	public static void cueColor(){
+		if (Settings.red){
+			FlashArrow.Instance.arrowL = GameObject.Find("arrowLR");
+			FlashArrow.Instance.arrowR = GameObject.Find("arrowRR");
+			Debug.Log("red arrow OoOoOoOoOoOoOooOooooooooooooooo");
+		} else if (Settings.black){
+			//Settings.Instance.arrowLR.SetActive(false);
+			FlashArrow.Instance.arrowL = GameObject.Find("arrowLB");
+			FlashArrow.Instance.arrowR = GameObject.Find("arrowRB");
+			Debug.Log("black arrow ------------------");
+		} else if (Settings.white){
+			//Settings.Instance.arrowLR.SetActive(false);
+			FlashArrow.Instance.arrowL = GameObject.Find("arrowLW");
+			FlashArrow.Instance.arrowR = GameObject.Find("arrowRW");
+			Debug.Log("white arrow betchesssssssssssssssssssssss");
+		} else {
+			//Settings.Instance.arrowLR.SetActive(false);
+			FlashArrow.Instance.arrowL = GameObject.Find("arrowLG");
+			FlashArrow.Instance.arrowR = GameObject.Find("arrowRG");
+			Debug.Log("greeeeeeeeyyyyyyyyyyyyyyyyyyyyyyyyyy-----");
+		}
+	}
+
+
 	// Increase the number of calls to Update.
-    void FixedUpdate()
-    {
-        fixedUpdateCount += 1;
-    }
+    //void FixedUpdate()
+    //{
+    //   fixedUpdateCount += 1;
+    //}
 	
 	void Update () {	
 		updateCount += 1;
@@ -75,11 +98,11 @@ public class FlashArrow : MonoBehaviour {
 		for(int i=0; i<12; i++)
 		{
 			yield return new WaitForSeconds(cycleDuration);
-			arrowL.SetActive(false);
+			FlashArrow.Instance.arrowL.SetActive(false);
 			//Debug.Log("left turned off");
 			yield return new WaitForSeconds(cycleDuration);
 			//Debug.Log("waited for frequency");
-			arrowL.SetActive(true);
+			FlashArrow.Instance.arrowL.SetActive(true);
 			//Debug.Log("left turned on");
 //			yield return new WaitForSeconds(cycleDuration);
 
@@ -95,10 +118,10 @@ public class FlashArrow : MonoBehaviour {
 		for(int j=0; j<18; j++)
 		{
 			yield return new WaitForSeconds(cycleDuration);
-			arrowR.SetActive(false);
+			FlashArrow.Instance.arrowR.SetActive(false);
 			//Debug.Log("right turned off");
 			yield return new WaitForSeconds(cycleDuration);
-			arrowR.SetActive(true);
+			FlashArrow.Instance.arrowR.SetActive(true);
 			//Debug.Log("right turned on");
 
 			fps_countR += 1;
