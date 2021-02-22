@@ -80,7 +80,7 @@ public static Scoring Instance;
 
 	void Update()
 	{
-		//Debug.Log("inside scoring update");
+		Debug.Log("inside scoring update");
 		if(scoreText != null)
 		{
 			//Debug.Log("inside score!=null");
@@ -125,14 +125,14 @@ public static Scoring Instance;
 				print("MoveBoat.training: "+MoveBoat.training);
 
 				// update final score
-				if(temp == 0 && MoveBoat.case786){	//786 = show cross
+				//if(temp == 0 && MoveBoat.case786){	//786 = show cross
 					//Debug.Log("case786");
 			//		fScore += tempScore;
 	//				Debug.Log("finalScore: "+scoreText.GetComponent<Text>().text);
-				}
+				//}
 
 				// only show points
-				if(MoveBoat.cross && count > 0f){ 
+				if(MoveBoat.cross && count >= 0f){ 
 					temp += 1;	// counting #x cross disappears
 //					avgScore = (float)count / (count + MoveBoat.countW);
 				}
@@ -197,7 +197,7 @@ public static Scoring Instance;
 					//Debug.Log("crossCount: "+crossCount);
 
 					if(crossCount == 4){
-						//Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
+						Debug.Log("FIREWORKS!!!!!!!!!!!!!!");
 						fireDisplay = true;
 						fireworks.SetActive(true);
 						//if (fireworks.isActive == false )
@@ -211,6 +211,9 @@ public static Scoring Instance;
 							Debug.Log("inside stopping particle system & hiding reward");
 						}
 					}
+				}
+				else if(crossCount == 0 && MoveBoat.case800){
+					// ***** add false point feedback here *****
 				}
 
 				if(crossCount >= 1 && MoveBoat.cross){	// hide reward(s)

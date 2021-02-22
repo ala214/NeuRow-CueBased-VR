@@ -9,7 +9,7 @@ public class MoveReward : MonoBehaviour {
 	//------TESTING-------------------
 	//public static float speed = 10.0f;
 	public static bool move = false;
-	public Transform defTextPos;
+	//public Transform defTextPos;
 
 
 	// object reference required to access non-static member "MoveReward.defTextPos"
@@ -24,7 +24,7 @@ public class MoveReward : MonoBehaviour {
 //		target = Settings.Instance.cross.transform;
 
 		// desired position for final score: -635.3996, -548, 300
-		defTextPos.position = Scoring.Instance.scoreText.transform.position;
+		//defTextPos.position = Scoring.Instance.scoreText.transform.position;
 
 	}
 	

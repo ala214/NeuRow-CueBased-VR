@@ -19,22 +19,19 @@ public class FlashArrow : MonoBehaviour {
 
 	
 	void Start () {	
-		//arrowL = GameObject.Find("LeftArrowVR");
-		//arrowR = GameObject.Find("RightArrowVR");
-		//if (Settings.blackwhite) {
-		//	arrowL = GameObject.Find ("arrowLFb");
-		//	arrowR = GameObject.Find ("arrowRFb");
-		//	Debug.Log("black");
-		//} else {
-		arrowL = GameObject.Find ("arrowLFr");
-		arrowR = GameObject.Find ("arrowRFr");
-		//}
+		arrowL = GameObject.Find ("arrowFLR");
+		arrowR = GameObject.Find ("arrowFRR");
+		if(Settings.grayF){
+			arrowL = GameObject.Find("arrowFLG");
+			arrowR = GameObject.Find("arrowFRG");
+		}
 
 		//Debug.Log("Flash Arrow!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
-		// Uncommenting this will cause framerate to drop to 10 frames per second.
+		// Uncommenting this will cause framerate to drop to *10* frames per second.
         // This will mean that FixedUpdate is called more often than Update.
         //Application.targetFrameRate = 10;
+        Application.targetFrameRate = 60;
         StartCoroutine(Loop());
 	}
 	

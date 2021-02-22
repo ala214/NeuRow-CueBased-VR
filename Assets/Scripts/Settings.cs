@@ -12,12 +12,13 @@ public class Settings : MonoBehaviour
 	public GameObject scoregui;
 	public GameObject traininggui;
 	public GameObject waypoint; 
-	public GameObject arrow;
+	//public GameObject arrow;
 //	public GameObject fireworks;
 	
 	public GameObject leap, hands, cross, leftarrow, rightarrow;
 	public GameObject rMaleHand, lMaleHand, rFemaleHand, lFemaleHand;
-	public GameObject arrowLFr, arrowRFr, arrowLFb, arrowRFb, arrowBg, arrowBw;
+	public GameObject arrowFRR, arrowFRW, arrowFRG, arrowFRB, arrowFLR, arrowFLW, arrowFLG, arrowFLB;
+	public GameObject arrowBRR, arrowBRW, arrowBRG, arrowBRB, arrowBLR, arrowBLW, arrowBLG, arrowBLB;
 
 	//public GameObject rewardtext;
 	
@@ -52,10 +53,10 @@ public class Settings : MonoBehaviour
 	public static bool stimL;
 	public static bool points;
 	public static bool percentage;
-	public static bool flash = true;
-	public static bool blackwhite = true;
-	public static bool redgray;
-	//public static bool flash = false;	// change to true for default SSVEP
+	//public static bool flash = true;
+	public static bool flash = false;	// change to true for default SSVEP
+	public static bool redF, whiteF, grayF, blackF;
+	public static bool redB, whiteB, grayB, blackB;
 //------------------------------------------
 
 //Network Settings -------------------------
@@ -96,26 +97,16 @@ public class Settings : MonoBehaviour
 		lFemaleHand = GameObject.Find("LeftHandFemale");
 		Settings.Instance.rFemaleHand.SetActive(false);
 		Settings.Instance.lFemaleHand.SetActive(false);
-		
-		arrowLFr = GameObject.Find("arrowLFr");
-		arrowRFr = GameObject.Find("arrowRFr");
-		arrowLFb = GameObject.Find("arrowLFb");
-		arrowRFb = GameObject.Find("arrowRFb");
-		arrowBg = GameObject.Find("arrowBg");
-		arrowBw = GameObject.Find("arrowBw");
 
 
 		scoregui.SetActive (false);
 		traininggui.SetActive (false);
-		// will not work for Online if not commented out but needed for training
-//		Settings.Instance.rewardtext.SetActive(false);
-//		fireworks.SetActive(false);
 
 		waveSound = GetComponent<AudioSource>();
 
 		getLogDirectory ();
 
-		duration = "600";
+		duration = "600"; //OV duration is 8:55 but set to 530s
 		Scoring.updateDuration(duration);
 
 		//MainCamera = GameObject.Find("Main Camera");
@@ -258,14 +249,14 @@ public class Settings : MonoBehaviour
 			if (isTraining) {
 				//			gui.SetActive (false);
 				waypoint.SetActive (false);
-				arrow.SetActive (false);
+				//arrow.SetActive (false);
 				Debug.Log("isTraining");
 			}
 			
 			if (!isTraining) {
 				//			gui.SetActive (true);
 				waypoint.SetActive (true);
-				arrow.SetActive (true);
+				//arrow.SetActive (true);
 				Debug.Log("!isTraining");
 			}
 			
@@ -273,8 +264,8 @@ public class Settings : MonoBehaviour
 			if (leapOn) {
 				leap.SetActive (true);
 				waypoint.SetActive (true);
-				arrow.SetActive (true);
-				//	hands.SetActive (false);
+				//arrow.SetActive (true);
+				//hands.SetActive (false);
 			}
 			if (!leapOn) {
 				leap.SetActive (false);
@@ -401,18 +392,99 @@ public class Settings : MonoBehaviour
 			//print(name+": "+value);
 			flash = value;
 			break;
-		//case "BackgroundB/W":
-		//	blackwhite = value;
-		//	Settings.Instance.arrowLFr.SetActive(false); 
-		//	Settings.Instance.arrowRFr.SetActive(false);
-		//	Settings.Instance.arrowBg.SetActive(false);
-		//	break;
-		//case "BackgroundR/G":
-		//	redgray = value;
-		//	Settings.Instance.arrowLFb.SetActive(false);
-		//	Settings.Instance.arrowRFb.SetActive(false); 
-		//	Settings.Instance.arrowBw.SetActive(false);
-		//	break;
+
+// Front flashing arrow colors
+		case "BackgroundFRed":
+			redF = value;
+			Settings.Instance.arrowFRR.SetActive(true);
+			Settings.Instance.arrowFLR.SetActive(true);
+			Settings.Instance.arrowFRW.SetActive(false);
+			Settings.Instance.arrowFLW.SetActive(false);
+			Settings.Instance.arrowFRG.SetActive(false);
+			Settings.Instance.arrowFLG.SetActive(false);
+			Settings.Instance.arrowFRB.SetActive(false);
+			Settings.Instance.arrowFLB.SetActive(false);
+			break;
+		case "BackgroundFWhite":
+			whiteF = value;
+			Settings.Instance.arrowFRR.SetActive(false);
+			Settings.Instance.arrowFLR.SetActive(false);
+			Settings.Instance.arrowFRW.SetActive(true);
+			Settings.Instance.arrowFLW.SetActive(true);
+			Settings.Instance.arrowFRG.SetActive(false);
+			Settings.Instance.arrowFLG.SetActive(false);
+			Settings.Instance.arrowFRB.SetActive(false);
+			Settings.Instance.arrowFLB.SetActive(false);
+			break;
+		case "BackgroundFGray":
+			grayF = value;
+			Settings.Instance.arrowFRR.SetActive(false);
+			Settings.Instance.arrowFLR.SetActive(false);
+			Settings.Instance.arrowFRW.SetActive(false);
+			Settings.Instance.arrowFLW.SetActive(false);
+			Settings.Instance.arrowFRG.SetActive(true);
+			Settings.Instance.arrowFLG.SetActive(true);
+			Settings.Instance.arrowFRB.SetActive(false);
+			Settings.Instance.arrowFLB.SetActive(false);
+			break;
+		case "BackgroundFBlack":
+			blackF = value;
+			Settings.Instance.arrowFRR.SetActive(false);
+			Settings.Instance.arrowFLR.SetActive(false);
+			Settings.Instance.arrowFRW.SetActive(false);
+			Settings.Instance.arrowFLW.SetActive(false);
+			Settings.Instance.arrowFRG.SetActive(false);
+			Settings.Instance.arrowFLG.SetActive(false);
+			Settings.Instance.arrowFRB.SetActive(true);
+			Settings.Instance.arrowFLB.SetActive(true);
+			break;
+
+// Back flashing arrow colors
+		case "BackgroundBRed":
+			redB = value;
+			Settings.Instance.arrowBRR.SetActive(true);
+			Settings.Instance.arrowBLR.SetActive(true);
+			Settings.Instance.arrowBRW.SetActive(false);
+			Settings.Instance.arrowBLW.SetActive(false);
+			Settings.Instance.arrowBRG.SetActive(false);
+			Settings.Instance.arrowBLG.SetActive(false);
+			Settings.Instance.arrowBRB.SetActive(false);
+			Settings.Instance.arrowBLB.SetActive(false);
+			break;
+		case "BackgroundBWhite":
+			whiteB = value;
+			Settings.Instance.arrowBRR.SetActive(false);
+			Settings.Instance.arrowBLR.SetActive(false);
+			Settings.Instance.arrowBRW.SetActive(true);
+			Settings.Instance.arrowBLW.SetActive(true);
+			Settings.Instance.arrowBRG.SetActive(false);
+			Settings.Instance.arrowBLG.SetActive(false);
+			Settings.Instance.arrowBRB.SetActive(false);
+			Settings.Instance.arrowBLB.SetActive(false);
+			break;
+		case "BackgroundBGray":
+			grayB = value;
+			Settings.Instance.arrowBRR.SetActive(false);
+			Settings.Instance.arrowBLR.SetActive(false);
+			Settings.Instance.arrowBRW.SetActive(false);
+			Settings.Instance.arrowBLW.SetActive(false);
+			Settings.Instance.arrowBRG.SetActive(true);
+			Settings.Instance.arrowBLG.SetActive(true);
+			Settings.Instance.arrowBRB.SetActive(false);
+			Settings.Instance.arrowBLB.SetActive(false);
+			break;
+		case "BackgroundBBlack":
+			blackB = value;
+			Settings.Instance.arrowBRR.SetActive(false);
+			Settings.Instance.arrowBLR.SetActive(false);
+			Settings.Instance.arrowBRW.SetActive(false);
+			Settings.Instance.arrowBLW.SetActive(false);
+			Settings.Instance.arrowBRG.SetActive(false);
+			Settings.Instance.arrowBLG.SetActive(false);
+			Settings.Instance.arrowBRB.SetActive(true);
+			Settings.Instance.arrowBLB.SetActive(true);
+			break;
+
 		case "BackgroundPoints": // reward points
 			//print(name+": "+value);
 			points = value;
