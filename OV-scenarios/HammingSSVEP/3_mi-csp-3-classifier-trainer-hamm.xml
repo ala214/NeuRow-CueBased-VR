@@ -4436,6 +4436,20 @@ S01: 300</Text>
 				</Attribute>
 			</Attributes>
 		</Comment>
+		<Comment>
+			<Identifier>(0x00007e47, 0x000066fd)</Identifier>
+			<Text>Classifier-[$core{date}-$core{time}].cfg</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>976</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>1088</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
 	</Comments>
 	<Metadata>
 		<Entry>

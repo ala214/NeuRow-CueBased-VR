@@ -3208,7 +3208,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x8d21ff41, 0xdf6afe7e)</Identifier>
-					<Value>C:/Users/neuro/Documents/Neurow2020/Data/CSP/CSP-[2020.11.23-17.21.40].cfg</Value>
+					<Value>C:/Users/neuro/Documents/Neurow2020/Data/CSP/CSP-[2020.12.10-12.14.33].cfg</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0xc80ce8af, 0xf699f813)</Identifier>
@@ -3312,7 +3312,7 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename to load configuration from</Name>
 					<DefaultValue></DefaultValue>
-					<Value>C:/Users/neuro/Documents/Neurow2020/Data/Classifier/Classifier-[2020.11.23-17.23.17].cfg</Value>
+					<Value>C:/Users/neuro/Documents/Neurow2020/Data/Classifier/Classifier-[2020.12.10-12.15.09].cfg</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -3627,7 +3627,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>1232</Value>
+					<Value>1264</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>

@@ -157,7 +157,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>duration</Name>
 					<DefaultValue>4.0</DefaultValue>
-					<Value>4</Value>
+					<Value>1</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -2891,14 +2891,14 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Epoch 1 duration (in sec)</Name>
 					<DefaultValue>1</DefaultValue>
-					<Value>2</Value>
+					<Value>0.5</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>Epoch 1 intervals (in sec)</Name>
 					<DefaultValue>0.5</DefaultValue>
-					<Value>0.05</Value>
+					<Value>0.04</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -3379,7 +3379,7 @@
 					<TypeIdentifier>(0x512a166f, 0x5c3ef83f)</TypeIdentifier>
 					<Name>High cut frequency (Hz)</Name>
 					<DefaultValue>40</DefaultValue>
-					<Value>45</Value>
+					<Value>30</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
@@ -3478,11 +3478,11 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>656</Value>
+					<Value>672</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>448</Value>
+					<Value>432</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x4e7b798a, 0x183beafb)</Identifier>
